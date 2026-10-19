@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn the 29 letters of the Turkish alphabet and the sounds that are tricky for English speakers, with audio and a quiz.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Alphabet — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; text-align:center; }
+    header { background:#E30A17; color:white; padding:20px; }
+    header p { margin-top:5px; font-size:14px; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px 4px; float:left; }
+    .back-wrap { padding:10px 20px 0; text-align:left; }
+    .speak-btn { padding:8px 12px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; font-size:14px; font-weight:bold; }
+    .speak-btn:hover { background:#b30812; }
+    .letter-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:15px; padding:20px; }
+    .letter-card { background:#fff; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); transition:.2s; cursor:default; }
+    .letter-card:hover { background:#ffe5e7; transform:scale(1.05); }
+    .letter-big { font-size:32px; font-weight:bold; color:#E30A17; }
+    .letter-card.tricky { background:#fff5f5; }
+    .tricky-tag { display:inline-block; background:#E30A17; color:white; font-size:11px; font-weight:bold; padding:1px 7px; border-radius:4px; }
+    .letter-card .tricky-tag { margin-top:6px; }
+    .letter-hint { margin-top:4px; color:#777; font-size:12px; }
+    .alpha-intro { clear:both; max-width:760px; margin:16px auto 0; padding:0 20px; font-size:15px; color:#333; line-height:1.6; }
+    .letter-word { margin-top:10px; color:#333; font-size:14px; }
+    .sound-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:15px; padding:15px 20px 30px; max-width:960px; margin:0 auto; text-align:left; }
+    .sound-card { background:#fff; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); }
+    .sound-title { font-weight:bold; font-size:1.1rem; color:#E30A17; margin-bottom:8px; }
+    .sound-sub { font-size:14px; color:#444; line-height:1.6; }
+    .point { display:flex; gap:10px; align-items:flex-start; margin-top:8px; }
+    .point-label { background:#E30A17; color:white; font-weight:bold; padding:2px 10px; border-radius:4px; font-size:15px; flex-shrink:0; }
+    .point-desc { font-size:14px; color:#333; line-height:1.5; }
+    .section-title { color:#E30A17; margin:10px 0 0; font-size:20px; font-weight:bold; }
+    .match-wrap { padding:20px; max-width:700px; margin:0 auto; }
+    .quiz-wrap { padding:20px; max-width:700px; margin:0 auto 40px; background:#fff5f5; border:2px solid #E30A17; border-radius:12px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🇹🇷 Turkish Alphabet</h1>
+  <p>Learn essential sounds</p>
+</header>
+
+<div class="back-wrap"><a href="index.html" class="back">⬅ Back</a></div>
+
+<p class="alpha-intro">Turkish has <strong>29 letters</strong> and every letter is always pronounced the same way — <strong>words are read exactly as they are written</strong>. There is no Q, W or X. Letters marked <span class="tricky-tag">tricky</span> sound different from English.</p>
+<div class="letter-grid" id="letter-grid"></div>
+
+<h2 class="section-title">📖 Sound Guide</h2>
+<div class="sound-grid">
+  <div class="sound-card">
+    <div class="sound-title">Ç and Ş</div>
+    <div class="sound-sub">These sounds exist in English, but not as separate letters.</div>
+    <div class="point"><span class="point-label">Ç</span><span class="point-desc">"ch" sound — like chair</span></div>
+    <div class="point"><span class="point-label">Ş</span><span class="point-desc">"sh" sound — like shoe</span></div>
+  </div>
+  <div class="sound-card">
+    <div class="sound-title">Ğ — Soft G</div>
+    <div class="sound-sub">This letter has no direct equivalent in English. It usually lengthens the preceding vowel rather than producing a strong consonant sound.</div>
+  </div>
+  <div class="sound-card">
+    <div class="sound-title">I / İ Distinction</div>
+    <div class="sound-sub">English has only one "i", but Turkish has two different ones:</div>
+    <div class="point"><span class="point-label">İ (dotted)</span><span class="point-desc">pronounced like "ee" in see</span></div>
+    <div class="point"><span class="point-label">I (dotless ı)</span><span class="point-desc">a more central, neutral vowel — similar to the vowel in roses without stress</span></div>
+  </div>
+  <div class="sound-card">
+    <div class="sound-title">Ö and Ü</div>
+    <div class="sound-sub">These are front rounded vowels. They don't exist in English but are similar to sounds in German:</div>
+    <div class="point"><span class="point-label">Ö</span><span class="point-desc">similar to German ö — like "ur" in burn, but with rounded lips</span></div>
+    <div class="point"><span class="point-label">Ü</span><span class="point-desc">similar to German ü — like saying "ee" with rounded lips</span></div>
+  </div>
+  <div class="sound-card">
+    <div class="sound-title">C, J, Y and R — False Friends</div>
+    <div class="sound-sub">These letters look familiar but sound different from English:</div>
+    <div class="point"><span class="point-label">C</span><span class="point-desc">always "j" as in jam — <em>cami</em> = "jah-mee"</span></div>
+    <div class="point"><span class="point-label">J</span><span class="point-desc">soft "zh" as in measure — rare, mostly in loanwords</span></div>
+    <div class="point"><span class="point-label">Y</span><span class="point-desc">always a consonant, like "y" in yes</span></div>
+    <div class="point"><span class="point-label">R</span><span class="point-desc">tapped, like Spanish or Italian r — never silent</span></div>
+  </div>
+</div>
+
+<div class="match-wrap">
+  <div id="match-container"></div>
+</div>
+<div style="padding:0 20px 40px; max-width:700px; margin:0 auto;">
+  <div id="quiz-container" class="quiz-wrap"></div>
+</div>
+
+<script src="_shared.js"></script>
+<script>
+const alphabet = [
+  ['A a','araba','car','"a" in father'],['B b','bir','one',''],['C c','cami','mosque','"j" in jam',1],
+  ['Ç ç','çay','tea','"ch" in chair',1],['D d','deniz','sea',''],['E e','ev','house','"e" in bed'],
+  ['F f','fırın','bakery',''],['G g','gece','night','"g" in go'],['Ğ ğ','dağ','mountain','lengthens the vowel before it',1],
+  ['H h','hava','weather',''],['I ı','kırmızı','red','"a" in about',1],['İ i','iki','two','"ee" in see',1],
+  ['J j','jandarma','gendarmerie','"s" in measure',1],['K k','kitap','book',''],['L l','limon','lemon',''],
+  ['M m','masa','table',''],['N n','nar','pomegranate',''],['O o','okul','school','"o" in more'],
+  ['Ö ö','öğrenci','student','German ö',1],['P p','para','money',''],['R r','resim','picture','tapped r, like Spanish',1],
+  ['S s','su','water','always "s", never "z"'],['Ş ş','şeker','sugar','"sh" in shoe',1],['T t','tren','train',''],
+  ['U u','uçak','plane','"oo" in food'],['Ü ü','üniversite','university','German ü',1],['V v','vapur','ferry',''],
+  ['Y y','yol','road','"y" in yes',1],['Z z','zor','difficult',''],
+];
+const lg = document.getElementById('letter-grid');
+alphabet.forEach(([letter, word, en, hint, tricky]) => {
+  const c = document.createElement('div');
+  c.className = 'letter-card' + (tricky ? ' tricky' : '');
+  c.innerHTML = `<div class="letter-big">${letter}</div>
+    <div class="letter-word" lang="tr">${word} <span lang="en">(${en})</span></div>
+    ${hint ? `<div class="letter-hint">${hint}</div>` : ''}
+    ${tricky ? '<div class="tricky-tag">tricky</div><br>' : ''}
+    <button class="speak-btn" aria-label="Listen to ${word}" onclick="speak('${word}')" style="margin-top:10px;">🔊 Listen</button>`;
+  lg.appendChild(c);
+});
+
+const matchPairs = [
+  { tr: "ç", en: "ch (church)" },
+  { tr: "ş", en: "sh (ship)" },
+  { tr: "ğ", en: "lengthens vowel before it" },
+  { tr: "ö", en: "rounded 'ur'" },
+  { tr: "ü", en: "rounded 'ee'" },
+  { tr: "ı", en: "unrounded 'i' (schwa)" },
+];
+const quizQuestions = [
+  { type:"mc", question:"ç", options:["ch (church)","c (cat)","sh (ship)","j (jar)"], answer:"ch (church)" },
+  { type:"mc", question:"ş", options:["sh (ship)","s (sun)","ch (church)","z (zoo)"], answer:"sh (ship)" },
+  { type:"mc", question:"çay ne demek?", options:["tea","sugar","student","mountain"], answer:"tea" },
+  { type:"mc", question:"Öğrenci ne demek?", options:["student","teacher","university","red"], answer:"student" },
+  { type:"fill", sentence:"dağ means ___ in English", answer:"mountain", hint:"the example word for ğ (yumuşak ge)" },
+  { type:"mc", question:"Which letter makes the 'sh' sound in Turkish?", options:["ş","ç","ğ","ü"], answer:"ş" },
+  { type:"mc", question:"ü is similar to which German sound?", options:["ü (rounded ee)","ö (rounded ur)","a (cat)","e (bed)"], answer:"ü (rounded ee)" },
+  { type:"mc", question:"ğ (soft g) usually...", options:["lengthens the vowel before it","sounds like g in go","sounds like j in jar","is always silent"], answer:"lengthens the vowel before it" },
+  { type:"fill", sentence:"şeker means ___ in English", answer:"sugar", hint:"the example word for ş" },
+  { type:"mc", question:"How is 'c' pronounced in cami (mosque)?", options:["j (jam)","k (cat)","s (sun)","ch (church)"], answer:"j (jam)" },
+  { type:"mc", question:"üniversite ne demek?", options:["university","student","red","mountain"], answer:"university" },
+];
+renderMatchGame('match-container', matchPairs, '🔗 Match It — Turkish Letters');
+renderQuiz('quiz-container', quizQuestions, 'Test Your Knowledge — Alphabet');
+</script>
+</body>
+</html>

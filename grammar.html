@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Basic Turkish grammar for beginners: vowel harmony, yes/no questions with mi, formal and informal you (sen/siz), and var/yok.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Basic Grammar — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .wrap { padding:0 20px 30px; max-width:1000px; margin:0 auto; }
+    .sec { color:#E30A17; margin:28px 0 6px; font-size:20px; font-weight:bold; }
+    .sec-num { display:inline-block; background:#E30A17; color:white; border-radius:50%; width:28px; height:28px; line-height:28px; text-align:center; font-size:15px; margin-right:6px; }
+    .lead { font-size:15px; color:#333; line-height:1.6; margin-bottom:14px; }
+    .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); text-align:left; margin-bottom:15px; }
+    .card-title { font-weight:bold; color:#E30A17; margin-bottom:10px; font-size:16px; }
+    .two-col { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:15px; }
+    .rule-box { background:#fff5f5; border-left:4px solid #E30A17; border-radius:6px; padding:12px 14px; font-size:14px; color:#333; line-height:1.6; margin-bottom:12px; }
+    .vowel-group { display:flex; gap:8px; flex-wrap:wrap; margin:8px 0 12px; }
+    .vowel { display:inline-block; min-width:38px; padding:6px 10px; border-radius:8px; font-size:20px; font-weight:bold; text-align:center; }
+    .vowel.front { background:#E30A17; color:white; }
+    .vowel.back { background:white; color:#E30A17; border:2px solid #E30A17; }
+    .ex-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:8px 10px; background:#fff8f8; border-radius:8px; border:1px solid #fdd; margin-bottom:8px; }
+    .ex-tr { font-weight:bold; font-size:15px; }
+    .ex-tr mark { background:none; color:#E30A17; text-decoration:underline; text-underline-offset:3px; }
+    .ex-en { color:#555; font-size:13px; margin-top:2px; }
+    .speak-btn { padding:5px 10px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; font-size:13px; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .table-scroll { overflow-x:auto; }
+    table.gram { width:100%; border-collapse:collapse; font-size:14px; }
+    table.gram th { background:#E30A17; color:white; padding:8px; text-align:left; }
+    table.gram td { padding:8px; border-bottom:1px solid #eee; vertical-align:top; }
+    table.gram td.tr { font-weight:bold; }
+    table.gram tr:nth-child(even) td { background:#fffafa; }
+    .tool { background:#fff5f5; border:2px dashed #E30A17; border-radius:12px; padding:18px; }
+    .tool-row { display:flex; gap:8px; flex-wrap:wrap; }
+    .tool input { flex:1; min-width:160px; padding:10px; border:2px solid #ddd; border-radius:8px; font-size:15px; }
+    .tool button.go { padding:10px 18px; background:#E30A17; color:white; border:none; border-radius:8px; cursor:pointer; font-weight:bold; }
+    .tool-out { margin-top:12px; font-size:15px; line-height:1.6; min-height:24px; color:#333; }
+    .tool-out strong { color:#E30A17; font-size:18px; }
+    .chip-row { display:flex; gap:6px; flex-wrap:wrap; margin-top:8px; }
+    .chip { padding:4px 10px; border:1px solid #E30A17; border-radius:14px; background:white; color:#E30A17; cursor:pointer; font-size:13px; }
+    .who-list { font-size:14px; color:#333; line-height:1.9; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+    .sec-title { color:#E30A17; text-align:center; margin:10px 0 0; font-size:18px; font-weight:bold; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🧩 Basic Grammar</h1>
+  <p>Four small rules that unlock the phrases in every other module</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+
+<div class="wrap">
+
+  <!-- 1. VOWEL HARMONY -->
+  <h2 class="sec"><span class="sec-num">1</span>Vowel Harmony</h2>
+  <p class="lead">Turkish builds words by adding endings (suffixes). The vowel in the ending changes to <strong>match the last vowel of the word</strong>. This is called vowel harmony, and it is the reason you see <span lang="tr">-ler</span> and <span lang="tr">-lar</span>, or <span lang="tr">mi</span>, <span lang="tr">mı</span>, <span lang="tr">mu</span> and <span lang="tr">mü</span>.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">2-way harmony: e / a</div>
+      <div class="rule-box">Used by the plural ending <strong lang="tr">-ler / -lar</strong> and many others.</div>
+      <div>Last vowel is a <strong>front</strong> vowel → <strong lang="tr">-ler</strong></div>
+      <div class="vowel-group" lang="tr"><span class="vowel front">e</span><span class="vowel front">i</span><span class="vowel front">ö</span><span class="vowel front">ü</span></div>
+      <div>Last vowel is a <strong>back</strong> vowel → <strong lang="tr">-lar</strong></div>
+      <div class="vowel-group" lang="tr"><span class="vowel back">a</span><span class="vowel back">ı</span><span class="vowel back">o</span><span class="vowel back">u</span></div>
+    </div>
+    <div class="card">
+      <div class="card-title">Examples — plural</div>
+      <div id="plural-examples"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">4-way harmony: i / ı / u / ü</div>
+    <div class="rule-box">Used by the question particle <strong lang="tr">mi</strong> and by personal endings. Look at the last vowel of the word:</div>
+    <div class="table-scroll">
+      <table class="gram">
+        <thead><tr><th>Last vowel</th><th>Ending vowel</th><th>Example</th></tr></thead>
+        <tbody lang="tr">
+          <tr><td>a, ı</td><td class="tr">ı</td><td>Uzak <strong>mı</strong>? <span lang="en">— Is it far?</span></td></tr>
+          <tr><td>e, i</td><td class="tr">i</td><td>Güzel <strong>mi</strong>? <span lang="en">— Is it nice?</span></td></tr>
+          <tr><td>o, u</td><td class="tr">u</td><td>Doğru <strong>mu</strong>? <span lang="en">— Is it correct?</span></td></tr>
+          <tr><td>ö, ü</td><td class="tr">ü</td><td>Bugün <strong>mü</strong>? <span lang="en">— Is it today?</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="tool">
+    <div class="card-title">🧪 Try it yourself</div>
+    <p style="font-size:14px;color:#444;margin-bottom:10px;">Type any Turkish word and see which plural ending and question particle it takes.</p>
+    <div class="tool-row">
+      <input id="harmony-input" type="text" lang="tr" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="e.g. kitap, öğrenci, okul" onkeydown="if(event.key==='Enter')runHarmony()">
+      <button class="go" onclick="runHarmony()">Show</button>
+    </div>
+    <div class="chip-row" id="harmony-chips"></div>
+    <div class="tool-out" id="harmony-out" aria-live="polite"></div>
+  </div>
+
+  <!-- 2. QUESTION PARTICLE MI -->
+  <h2 class="sec"><span class="sec-num">2</span>Yes/No Questions with <span lang="tr">mi</span></h2>
+  <p class="lead">To turn a sentence into a yes/no question, add <strong lang="tr">mi</strong> after the word you are asking about. It is <strong>written as a separate word</strong>, but it follows vowel harmony (<span lang="tr">mi / mı / mu / mü</span>). Your voice rises on the word just before it.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">Statement → Question</div>
+      <div id="mi-examples"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">With "I, you, we…"</div>
+      <div class="rule-box">Personal endings attach to <span lang="tr">mi</span>, not to the word before it.</div>
+      <div class="table-scroll">
+        <table class="gram">
+          <thead><tr><th>Person</th><th>Question</th><th>Meaning</th></tr></thead>
+          <tbody>
+            <tr><td lang="tr">ben</td><td class="tr" lang="tr">Öğrenci miyim?</td><td>Am I a student?</td></tr>
+            <tr><td lang="tr">sen</td><td class="tr" lang="tr">Öğrenci misin?</td><td>Are you a student?</td></tr>
+            <tr><td lang="tr">o</td><td class="tr" lang="tr">Öğrenci mi?</td><td>Is he/she a student?</td></tr>
+            <tr><td lang="tr">biz</td><td class="tr" lang="tr">Öğrenci miyiz?</td><td>Are we students?</td></tr>
+            <tr><td lang="tr">siz</td><td class="tr" lang="tr">Öğrenci misiniz?</td><td>Are you students? / Are you a student? (formal)</td></tr>
+            <tr><td lang="tr">onlar</td><td class="tr" lang="tr">Öğrenciler mi?</td><td>Are they students?</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">💡 The position of <span lang="tr">mi</span> changes the meaning</div>
+    <div id="mi-position"></div>
+  </div>
+
+  <!-- 3. SEN / SIZ -->
+  <h2 class="sec"><span class="sec-num">3</span><span lang="tr">Sen</span> or <span lang="tr">Siz</span>? Informal and Formal "You"</h2>
+  <p class="lead">Turkish has two words for "you". <strong lang="tr">Sen</strong> is informal and singular. <strong lang="tr">Siz</strong> is polite (for one person) and also the plural "you" (for a group). Verbs change with them: <span lang="tr">-sin</span> for sen, <span lang="tr">-siniz</span> for siz.</p>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">👥 Use <span lang="tr">sen</span> with…</div>
+      <div class="who-list">✅ friends and classmates<br>✅ your flatmates and other Erasmus students<br>✅ children<br>✅ anyone who says <em lang="tr">"Sen diyebilirsin"</em> (you can say sen)</div>
+    </div>
+    <div class="card">
+      <div class="card-title">🎩 Use <span lang="tr">siz</span> with…</div>
+      <div class="who-list">✅ lecturers (together with <em lang="tr">hocam</em>)<br>✅ officials at the migration office or student affairs<br>✅ shop staff, waiters, taxi drivers<br>✅ older people and anyone you don't know</div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Same sentence, two levels</div>
+    <div class="table-scroll">
+      <table class="gram">
+        <thead><tr><th>English</th><th>Informal (sen)</th><th>Formal (siz)</th></tr></thead>
+        <tbody id="sen-siz-table"></tbody>
+      </table>
+    </div>
+    <div class="rule-box" style="margin-top:12px;margin-bottom:0;">Not sure? Start with <strong lang="tr">siz</strong>. Being too polite is never a problem; being too casual can sound rude.</div>
+  </div>
+
+  <!-- 4. VAR / YOK -->
+  <h2 class="sec"><span class="sec-num">4</span><span lang="tr">Var</span> and <span lang="tr">Yok</span>: "There is" and "I have"</h2>
+  <p class="lead"><strong lang="tr">Var</strong> means "there is / exists" and <strong lang="tr">yok</strong> means "there isn't / doesn't exist". Turkish also uses them for <strong>having</strong> something: instead of "I have money", you say "my money exists" — <span lang="tr">Param var</span>. The short answer to a <span lang="tr">var mı?</span> question is just <span lang="tr">Var.</span> or <span lang="tr">Yok.</span></p>
+
+  <div class="two-col">
+    <div class="card">
+      <div class="card-title">There is / There isn't</div>
+      <div id="var-exist"></div>
+    </div>
+    <div class="card">
+      <div class="card-title">I have / I don't have</div>
+      <div class="rule-box"><strong lang="tr">-(ı)m</strong> = my. <span lang="tr">para → param</span> (my money), <span lang="tr">ders → dersim</span> (my class). The vowel follows 4-way harmony.</div>
+      <div id="var-have"></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="sec-title">🔗 Match It — Grammar Words</div>
+<div class="match-box" id="match-game"></div>
+<div class="sec-title">📝 Test Your Knowledge — Grammar</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+function exRow(tr, en, say) {
+  const plain = say || tr.replace(/<[^>]+>/g, '');
+  return `<div class="ex-row"><div><div class="ex-tr" lang="tr">${tr}</div><div class="ex-en">${en}</div></div><button class="speak-btn" aria-label="Listen" onclick="speak('${plain.replace(/'/g, "\\'")}')">🔊</button></div>`;
+}
+function fill(id, rows) { document.getElementById(id).innerHTML = rows.map(r => exRow(...r)).join(''); }
+
+fill('plural-examples', [
+  ['ev → ev<mark>ler</mark>', 'house → houses', 'ev, evler'],
+  ['öğrenci → öğrenci<mark>ler</mark>', 'student → students', 'öğrenci, öğrenciler'],
+  ['gün → gün<mark>ler</mark>', 'day → days', 'gün, günler'],
+  ['kitap → kitap<mark>lar</mark>', 'book → books', 'kitap, kitaplar'],
+  ['okul → okul<mark>lar</mark>', 'school → schools', 'okul, okullar'],
+  ['kız → kız<mark>lar</mark>', 'girl → girls', 'kız, kızlar'],
+]);
+
+fill('mi-examples', [
+  ['Sen öğrencisin. → Sen öğrenci <mark>misin</mark>?', 'You are a student. → Are you a student?', 'Sen öğrenci misin?'],
+  ['Hazırsın. → Hazır <mark>mısın</mark>?', 'You are ready. → Are you ready?', 'Hazır mısın?'],
+  ['Yorgunsun. → Yorgun <mark>musun</mark>?', 'You are tired. → Are you tired?', 'Yorgun musun?'],
+  ['Türk. → Türk <mark>mü</mark>?', 'He/she is Turkish. → Is he/she Turkish?', 'Türk mü?'],
+  ['Türkçe biliyorsunuz. → Türkçe biliyor <mark>musunuz</mark>?', 'You speak Turkish. → Do you speak Turkish?', 'Türkçe biliyor musunuz?'],
+]);
+
+fill('mi-position', [
+  ['Ali <mark>mi</mark> bugün geliyor?', 'Is it <em>Ali</em> who is coming today (not someone else)?', 'Ali mi bugün geliyor?'],
+  ['Ali bugün <mark>mü</mark> geliyor?', 'Is Ali coming <em>today</em> (not another day)?', 'Ali bugün mü geliyor?'],
+  ['Ali bugün geliyor <mark>mu</mark>?', 'Is Ali coming today? (general question)', 'Ali bugün geliyor mu?'],
+]);
+
+const senSiz = [
+  ['How are you?', 'Nasılsın?', 'Nasılsınız?'],
+  ['Where are you from?', 'Nerelisin?', 'Nerelisiniz?'],
+  ['Do you speak English?', 'İngilizce biliyor musun?', 'İngilizce biliyor musunuz?'],
+  ['Come in!', 'Gel!', 'Gelin! / Buyurun!'],
+  ['Can you help me?', 'Bana yardım edebilir misin?', 'Bana yardım edebilir misiniz?'],
+  ['Thank you', 'Sağ ol / Teşekkürler', 'Teşekkür ederim / Sağ olun'],
+];
+document.getElementById('sen-siz-table').innerHTML = senSiz.map(([en, sen, siz]) => {
+  const btn = t => `<button class="speak-btn" aria-label="Listen" style="margin-left:6px;" onclick="speak('${t.split(' / ')[0].replace(/'/g, "\\'")}')">🔊</button>`;
+  return `<tr><td>${en}</td><td class="tr" lang="tr">${sen}${btn(sen)}</td><td class="tr" lang="tr">${siz}${btn(siz)}</td></tr>`;
+}).join('');
+
+fill('var-exist', [
+  ['Burada Wi-Fi <mark>var mı</mark>?', 'Is there Wi-Fi here?', 'Burada Wi-Fi var mı?'],
+  ['<mark>Var</mark>. / <mark>Yok</mark>.', 'Yes, there is. / No, there isn\'t.', 'Var. Yok.'],
+  ['Boş masanız <mark>var mı</mark>?', 'Do you have a free table?', 'Boş masanız var mı?'],
+  ['Yakında eczane <mark>var mı</mark>?', 'Is there a pharmacy nearby?', 'Yakında eczane var mı?'],
+  ['Sorun <mark>yok</mark>.', 'No problem.', 'Sorun yok.'],
+]);
+
+fill('var-have', [
+  ['Bir sorum <mark>var</mark>.', 'I have a question.', 'Bir sorum var.'],
+  ['Bugün dersim <mark>var</mark>.', 'I have class today.', 'Bugün dersim var.'],
+  ['Randevum <mark>var</mark>.', 'I have an appointment.', 'Randevum var.'],
+  ['Param <mark>yok</mark>.', 'I have no money.', 'Param yok.'],
+  ['Kardeşin <mark>var mı</mark>?', 'Do you have siblings? (sen)', 'Kardeşin var mı?'],
+]);
+
+// ── Vowel harmony tool ──
+const FRONT = 'eiöü', BACK = 'aıou';
+const Q_VOWEL = { a:'ı', ı:'ı', e:'i', i:'i', o:'u', u:'u', ö:'ü', ü:'ü' };
+function lastVowel(word) {
+  const v = trLower(word).match(/[aeıioöuü]/g);
+  return v ? v[v.length - 1] : null;
+}
+function runHarmony() {
+  const raw = document.getElementById('harmony-input').value.trim();
+  const out = document.getElementById('harmony-out');
+  if (!raw) { out.textContent = ''; return; }
+  // Proper nouns keep their capital letter and take an apostrophe before suffixes (Ankara'lar)
+  const isProper = raw[0] !== raw[0].toLocaleLowerCase('tr-TR');
+  const word = isProper ? raw : trLower(raw);
+  const v = lastVowel(word);
+  if (!v) { out.textContent = 'This word has no Turkish vowel — try another one.'; return; }
+  const plural = (isProper ? "'" : '') + (FRONT.includes(v) ? 'ler' : 'lar');
+  const q = 'm' + Q_VOWEL[v];
+  out.innerHTML = `Last vowel: <strong>${v}</strong> (${FRONT.includes(v) ? 'front' : 'back'} vowel)<br>
+    Plural: <strong lang="tr">${word}${plural}</strong><br>
+    Question: <strong lang="tr">${word} ${q}?</strong>
+    <button class="speak-btn" aria-label="Listen" style="margin-left:6px;" onclick="speak('${(word + plural).replace(/'/g, '')}. ${word} ${q}?')">🔊</button>
+    <div style="font-size:12px;color:#888;margin-top:6px;">A few loanwords break the rule (e.g. saat → saatler). These are exceptions you learn one by one.</div>`;
+}
+document.getElementById('harmony-chips').innerHTML = ['kitap','öğrenci','okul','gün','çay','şehir','üniversite','arkadaş']
+  .map(w => `<button class="chip" lang="tr" onclick="document.getElementById('harmony-input').value='${w}';runHarmony()">${w}</button>`).join('');
+
+// ── Games ──
+const matchPairs = [
+  {tr:'var', en:'there is / I have'},
+  {tr:'yok', en:"there isn't / I don't have"},
+  {tr:'sen', en:'you (informal)'},
+  {tr:'siz', en:'you (formal / plural)'},
+  {tr:'-ler / -lar', en:'plural ending'},
+  {tr:'mi / mı / mu / mü', en:'question particle'},
+];
+const quizQuestions = [
+  {type:'mc', question:'Plural of "kitap" (book)?', options:['kitaplar','kitapler','kitaplır','kitaplur'], answer:'kitaplar'},
+  {type:'mc', question:'Plural of "öğrenci" (student)?', options:['öğrenciler','öğrencilar','öğrencilır','öğrencilür'], answer:'öğrenciler'},
+  {type:'fill', sentence:'Sen öğrenci ___?', answer:'misin', hint:'Are you a student?'},
+  {type:'mc', question:'Türk ___? (Is he/she Turkish?)', options:['mü','mı','mi','mu'], answer:'mü'},
+  {type:'fill', sentence:'Uzak ___?', answer:'mı', hint:'Is it far?'},
+  {type:'mc', question:'How is the question particle "mi" written?', options:['As a separate word','Attached to the word before it','Only at the start of the sentence','With a hyphen'], answer:'As a separate word'},
+  {type:'mc', question:'You meet your lecturer. Which greeting fits?', options:['Hocam, nasılsınız?','Hocam, nasılsın?','Nasılsın, Ahmet?','Naber?'], answer:'Hocam, nasılsınız?'},
+  {type:'fill', sentence:'Türkçe biliyor ___?', answer:'musunuz', hint:'Do you speak Turkish? (formal)'},
+  {type:'fill', sentence:'Burada Wi-Fi ___ mı?', answer:'var', hint:'Is there Wi-Fi here?'},
+  {type:'mc', question:'"Param yok" means…', options:['I have no money','I have money','Where is my money?','Money is not important'], answer:'I have no money'},
+  {type:'mc', question:'"Sorun yok" means…', options:['No problem','There is a question','I have a problem','Is there a problem?'], answer:'No problem'},
+];
+renderMatchGame('match-game', matchPairs, '🔗 Match the grammar words');
+renderQuiz('quiz-box', quizQuestions, '📝 Test Your Knowledge — Grammar');
+</script>
+</body>
+</html>

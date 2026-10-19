@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn real Turkish expressions through popular songs by Tarkan and Manifest, with translations and a quiz.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Learn with Songs — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin:8px 0 0; font-size:14px; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .songs-wrap { padding:20px; max-width:900px; margin:auto; }
+    .song-card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); margin-bottom:25px; text-align:center; }
+    .song-title { color:#E30A17; font-size:18px; font-weight:bold; margin-bottom:16px; }
+    .song-card iframe { border:none; border-radius:8px; max-width:100%; }
+    .lyric-block { margin-top:20px; font-size:18px; line-height:1.6; }
+    .lyric-tr { background:#E30A17; color:white; font-weight:bold; padding:4px 10px; display:inline-block; }
+    .lyric-en { background:black; color:white; font-weight:bold; padding:4px 10px; display:inline-block; margin-top:4px; font-size:15px; }
+    .speak-btn { padding:4px 10px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; font-size:14px; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .artist-info { margin-top:20px; font-size:14px; color:#444; line-height:1.6; border-top:1px solid #ddd; padding-top:10px; text-align:left; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+    .sec-title { color:#E30A17; text-align:center; margin:10px 0 0; font-size:18px; font-weight:bold; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🎵 Learn Turkish with Music</h1>
+  <p>Understand real-life expressions through songs</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+
+<div class="songs-wrap">
+
+  <div class="song-card">
+    <div class="song-title">Song 1: Manifest - Snap</div>
+    <iframe width="100%" height="300" src="https://www.youtube-nocookie.com/embed/jVQNc2XfCPk?start=54&end=75" title="Manifest – Snap (music video)" loading="lazy" allowfullscreen></iframe>
+    <div class="lyric-block">
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Kaçma, kovalamam (kaçma, kovalamam)</span><button class="speak-btn" onclick="speak('Kaçma, kovalamam')">🔊</button></div>
+        <br><span class="lyric-en">Don't run, I won't chase you (don't run, I won't chase you).</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Senin gibisini çok (çok) çok (çok) çok (çok) gördüm</span><button class="speak-btn" onclick="speak('Senin gibisini çok çok çok gördüm')">🔊</button></div>
+        <br><span class="lyric-en">I've seen so, so, so many like you.</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Affedemem, hayır (affedemem, hayır) sesin gelmiyo' hiç</span><button class="speak-btn" onclick="speak('Affedemem, hayır, sesin gelmiyor hiç')">🔊</button></div>
+        <br><span class="lyric-en">I can't forgive you, no — your voice doesn't reach me at all.</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Yok, yok, yok, bye-bye (bye-bye)</span><button class="speak-btn" onclick="speak('Yok, yok, yok')">🔊</button></div>
+        <br><span class="lyric-en">No, no, no, bye-bye.</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Sana alkış yok, anca finger snap-nap-nap-nap-nap</span><button class="speak-btn" onclick="speak('Sana alkış yok')">🔊</button></div>
+        <br><span class="lyric-en">No applause for you, only a finger snap.</span>
+      </div>
+    </div>
+    <div class="artist-info">Manifest is a six-member girl group. They are currently among the most popular artists in Türkiye. During your Erasmus experience, it is highly likely that you will hear their songs at parties, social events, and various entertainment settings. Their music is especially popular among younger audiences.</div>
+  </div>
+
+  <div class="song-card">
+    <div class="song-title">Song 2: Tarkan - Hüp</div>
+    <iframe width="100%" height="300" src="https://www.youtube-nocookie.com/embed/tZgtN2hg-tg?start=59&end=76" title="Tarkan – Hüp (music video)" loading="lazy" allowfullscreen></iframe>
+    <div class="lyric-block">
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Kuş sütüyle beslerim seni</span><button class="speak-btn" onclick="speak('Kuş sütüyle beslerim seni')">🔊</button></div>
+        <br><span class="lyric-en">I would take great care of you. (lit. "I'd feed you with bird's milk" — something impossibly rare)</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Mis yerine koklarım seni</span><button class="speak-btn" onclick="speak('Mis yerine koklarım seni')">🔊</button></div>
+        <br><span class="lyric-en">I would cherish you deeply. (lit. "I'd smell you like a sweet fragrance")</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Kalbimin sarayları senin</span><button class="speak-btn" onclick="speak('Kalbimin sarayları senin')">🔊</button></div>
+        <br><span class="lyric-en">The palaces of my heart belong to you.</span>
+      </div>
+      <div style="margin-top:10px;">
+        <div style="display:inline-flex;align-items:center;gap:8px;"><span class="lyric-tr">Sen ağlat ben severim seni</span><button class="speak-btn" onclick="speak('Sen ağlat ben severim seni')">🔊</button></div>
+        <br><span class="lyric-en">Even if you make me cry, I still love you.</span>
+      </div>
+    </div>
+    <div class="artist-info">Tarkan is a legendary Turkish pop artist who has remained popular since the 1990s and continues to produce music today. He appeals to all generations, including young people, middle-aged audiences, and older listeners. In almost any social setting in Türkiye, you are very likely to hear his songs, as he has produced many widely recognized hits.</div>
+  </div>
+
+</div>
+
+<div class="sec-title">🔗 Match It — Song Words</div>
+<div class="match-box" id="match-game"></div>
+<div class="sec-title">📝 Test Your Knowledge — Music</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const matchPairs = [
+  {tr:'kaçma', en:"don't run"},
+  {tr:'kovalamam', en:"I won't chase you"},
+  {tr:'affedemem', en:"I can't forgive"},
+  {tr:'yok', en:"no / there's nothing"},
+  {tr:'severim', en:'I love'},
+  {tr:'saray', en:'palace'},
+];
+const quizQuestions = [
+  {type:'mc',question:'Kaçma, kovalamam',options:["Don't run, I won't chase you","Come back, I miss you","Run away with me","I will always find you"],answer:"Don't run, I won't chase you"},
+  {type:'mc',question:'Affedemem, hayır',options:["I can't forgive you, no","I can't forget you, no","I don't care, no","I won't leave, no"],answer:"I can't forgive you, no"},
+  {type:'fill',sentence:'Senin gibisini çok çok ___',answer:'gördüm',hint:"I've seen many like you."},
+  {type:'mc',question:'Kalbimin sarayları senin',options:['The palaces of my heart belong to you','My heart beats only for you','You stole my heart away',"You are my heart's queen"],answer:'The palaces of my heart belong to you'},
+  {type:'fill',sentence:'Sen ağlat ben ___ seni',answer:'severim',hint:'Even if you make me cry, I still love you.'},
+  {type:'mc',question:'Yok yok yok',options:["No, no, no / There's nothing","Yes, yes, yes","Go, go, go","Come, come, come"],answer:"No, no, no / There's nothing"},
+  {type:'mc',question:'Kuş sütüyle beslerim seni',options:['I would take great care of you','I would leave you behind','I would cry for you','I would sing for you'],answer:'I would take great care of you'},
+  {type:'mc',question:'Mis yerine koklarım seni',options:['I would cherish you deeply','I would forget you','I would chase you','I would find you'],answer:'I would cherish you deeply'},
+  {type:'fill',sentence:'Kuş ___ beslerim seni',answer:'sütüyle',hint:'I would take great care of you.'},
+  {type:'mc',question:"Which group sings 'Snap'?",options:['Manifest','Tarkan','Sertab','maNga'],answer:'Manifest'},
+];
+renderMatchGame('match-game', matchPairs, '🔗 Match the song words');
+renderQuiz('quiz-box', quizQuestions, '📝 Test Your Knowledge — Music');
+</script>
+</body>
+</html>

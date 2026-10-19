@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel across Türkiye: airport, bus and hotel phrases, directions, emergency phrases and popular destinations.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Plan Your Travel — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; font-weight:normal; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .wrap { padding:20px; max-width:1100px; margin:0 auto; }
+    .sec-left { color:#E30A17; text-align:left; margin-bottom:12px; font-size:18px; font-weight:bold; }
+    .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; text-align:left; }
+    .phrase-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:8px 0; }
+    .phr-tr { font-weight:bold; font-size:14px; }
+    .phr-en { color:#444; font-size:13px; margin-bottom:2px; font-weight:normal; }
+    .speak-btn { padding:5px 10px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .sit-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; margin-bottom:24px; }
+    .sit-title { color:#E30A17; margin-bottom:12px; text-align:center; font-weight:bold; font-size:16px; }
+    .budget-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:10px; }
+    .budget-row { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px; background:#fff8f8; border-radius:8px; border:1px solid #fdd; }
+    .emg-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:10px; }
+    .emg-row { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:10px; background:white; border-radius:8px; border:2px solid #E30A17; }
+    .emg-tr { font-weight:bold; color:#E30A17; }
+    .dest-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:15px; margin-bottom:24px; }
+    .dest-card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; text-align:left; }
+    .dest-head { display:flex; align-items:center; justify-content:space-between; margin-bottom:8px; }
+    .dest-name { font-weight:bold; font-size:16px; }
+    .dest-en { color:#444; font-size:13px; font-weight:normal; margin-bottom:2px; }
+    .dest-img { width:100%; border-radius:10px; margin-bottom:10px; height:140px; object-fit:cover; }
+    .place-row { display:flex; align-items:center; justify-content:space-between; gap:8px; margin:5px 0; }
+    .place-tr { font-size:14px; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+    .sec-title { color:#E30A17; text-align:center; margin:10px 0 0; font-size:18px; font-weight:bold; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🌍 Plan Your Travel</h1>
+  <p>Learn how to travel across Türkiye</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+
+<div class="wrap">
+  <h2 class="sec-left">🗣️ Situational Phrases</h2>
+  <div class="sit-grid">
+    <div class="card">
+      <div class="sit-title">✈️ At the Airport</div>
+      <div class="phrase-row"><div><div class="phr-tr">İstanbul uçuşu hangi kapıdan kalkıyor?</div><div class="phr-en">Which gate does the Istanbul flight depart from?</div></div><button class="speak-btn" onclick="speak('İstanbul uçuşu hangi kapıdan kalkıyor?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Pasaportunuzu görebilir miyim?</div><div class="phr-en">Can I see your passport?</div></div><button class="speak-btn" onclick="speak('Pasaportunuzu görebilir miyim?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Kaç tane bagajınız var?</div><div class="phr-en">How many bags do you have?</div></div><button class="speak-btn" onclick="speak('Kaç tane bagajınız var?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Uçuşum gecikti</div><div class="phr-en">My flight is delayed</div></div><button class="speak-btn" onclick="speak('Uçuşum gecikti')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Bagajım kayboldu</div><div class="phr-en">My luggage is lost</div></div><button class="speak-btn" onclick="speak('Bagajım kayboldu')">🔊</button></div>
+    </div>
+    <div class="card">
+      <div class="sit-title">🚌 At the Bus / Train Station</div>
+      <div class="phrase-row"><div><div class="phr-tr">Ankara'ya bilet almak istiyorum</div><div class="phr-en">I want to buy a ticket to Ankara</div></div><button class="speak-btn" onclick="speak('Ankara\'ya bilet almak istiyorum')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Bir sonraki sefer ne zaman?</div><div class="phr-en">When is the next departure?</div></div><button class="speak-btn" onclick="speak('Bir sonraki sefer ne zaman?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Kalkış saati nedir?</div><div class="phr-en">What is the departure time?</div></div><button class="speak-btn" onclick="speak('Kalkış saati nedir?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Varış saati nedir?</div><div class="phr-en">What is the arrival time?</div></div><button class="speak-btn" onclick="speak('Varış saati nedir?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Bu koltuk boş mu?</div><div class="phr-en">Is this seat empty?</div></div><button class="speak-btn" onclick="speak('Bu koltuk boş mu?')">🔊</button></div>
+    </div>
+    <div class="card">
+      <div class="sit-title">🏨 At Hotel Check-in</div>
+      <div class="phrase-row"><div><div class="phr-tr">Rezervasyonum var</div><div class="phr-en">I have a reservation</div></div><button class="speak-btn" onclick="speak('Rezervasyonum var')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Adıma bir oda ayırttım</div><div class="phr-en">I booked a room in my name</div></div><button class="speak-btn" onclick="speak('Adıma bir oda ayırttım')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Kaç gecelik kalacaksınız?</div><div class="phr-en">How many nights will you stay?</div></div><button class="speak-btn" onclick="speak('Kaç gecelik kalacaksınız?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Odanız hazır</div><div class="phr-en">Your room is ready</div></div><button class="speak-btn" onclick="speak('Odanız hazır')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Check-out saat kaçta?</div><div class="phr-en">What time is check-out?</div></div><button class="speak-btn" onclick="speak('Check-out saat kaçta?')">🔊</button></div>
+    </div>
+    <div class="card">
+      <div class="sit-title">🧭 Asking for Directions</div>
+      <div class="phrase-row"><div><div class="phr-tr">Nasıl gidebilirim?</div><div class="phr-en">How can I get there?</div></div><button class="speak-btn" onclick="speak('Nasıl gidebilirim?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Nerede?</div><div class="phr-en">Where is it?</div></div><button class="speak-btn" onclick="speak('Nerede?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Düz git</div><div class="phr-en">Go straight</div></div><button class="speak-btn" onclick="speak('Düz git')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Sağa dön</div><div class="phr-en">Turn right</div></div><button class="speak-btn" onclick="speak('Sağa dön')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Sola dön</div><div class="phr-en">Turn left</div></div><button class="speak-btn" onclick="speak('Sola dön')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">İlk kavşakta sağa dön</div><div class="phr-en">Turn right at the first junction</div></div><button class="speak-btn" onclick="speak('İlk kavşakta sağa dön')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Yakın mı?</div><div class="phr-en">Is it close?</div></div><button class="speak-btn" onclick="speak('Yakın mı?')">🔊</button></div>
+      <div class="phrase-row"><div><div class="phr-tr">Yürüyerek ne kadar sürer?</div><div class="phr-en">How long does it take on foot?</div></div><button class="speak-btn" onclick="speak('Yürüyerek ne kadar sürer?')">🔊</button></div>
+    </div>
+  </div>
+
+  <h2 class="sec-left">💸 Budget Travel Vocabulary</h2>
+  <div class="card" style="margin-bottom:24px;">
+    <div class="budget-grid">
+      <div class="budget-row"><div><div style="font-weight:bold;">bilet</div><div class="phr-en">ticket</div></div><button class="speak-btn" onclick="speak('bilet')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">havaalanı</div><div class="phr-en">airport</div></div><button class="speak-btn" onclick="speak('havaalanı')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">otel</div><div class="phr-en">hotel</div></div><button class="speak-btn" onclick="speak('otel')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">tek yön</div><div class="phr-en">one-way</div></div><button class="speak-btn" onclick="speak('tek yön')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">gidiş-dönüş</div><div class="phr-en">round trip</div></div><button class="speak-btn" onclick="speak('gidiş-dönüş')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">kalkış</div><div class="phr-en">departure</div></div><button class="speak-btn" onclick="speak('kalkış')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">varış</div><div class="phr-en">arrival</div></div><button class="speak-btn" onclick="speak('varış')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">seferler</div><div class="phr-en">departures / services</div></div><button class="speak-btn" onclick="speak('seferler')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">aktarmalı</div><div class="phr-en">with a transfer</div></div><button class="speak-btn" onclick="speak('aktarmalı')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">direkt</div><div class="phr-en">direct</div></div><button class="speak-btn" onclick="speak('direkt')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">erken rezervasyon</div><div class="phr-en">early booking</div></div><button class="speak-btn" onclick="speak('erken rezervasyon')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">indirimli</div><div class="phr-en">discounted</div></div><button class="speak-btn" onclick="speak('indirimli')">🔊</button></div>
+      <div class="budget-row"><div><div style="font-weight:bold;">tam fiyat</div><div class="phr-en">full price</div></div><button class="speak-btn" onclick="speak('tam fiyat')">🔊</button></div>
+    </div>
+  </div>
+
+  <h2 class="sec-left">🆘 Emergency Phrases</h2>
+  <div class="card" style="margin-bottom:24px;background:#fff5f5;">
+    <p style="margin:0 0 12px;font-size:14px;color:#333;"><strong>📞 112</strong> is the single emergency number in Türkiye — ambulance, police and fire. It is free and works from any phone.</p>
+    <div class="emg-grid">
+      <div class="emg-row"><div><div class="emg-tr">Yardım edin!</div><div class="phr-en">Help!</div></div><button class="speak-btn" onclick="speak('Yardım edin!')">🔊</button></div>
+      <div class="emg-row"><div><div class="emg-tr">Kayboldum</div><div class="phr-en">I'm lost</div></div><button class="speak-btn" onclick="speak('Kayboldum')">🔊</button></div>
+      <div class="emg-row"><div><div class="emg-tr">En yakın hastane nerede?</div><div class="phr-en">Where is the nearest hospital?</div></div><button class="speak-btn" onclick="speak('En yakın hastane nerede?')">🔊</button></div>
+      <div class="emg-row"><div><div class="emg-tr">Polis çağırın!</div><div class="phr-en">Call the police!</div></div><button class="speak-btn" onclick="speak('Polis çağırın!')">🔊</button></div>
+      <div class="emg-row"><div><div class="emg-tr">Çantam çalındı</div><div class="phr-en">My bag was stolen</div></div><button class="speak-btn" onclick="speak('Çantam çalındı')">🔊</button></div>
+      <div class="emg-row"><div><div class="emg-tr">İyi değilim</div><div class="phr-en">I'm not feeling well</div></div><button class="speak-btn" onclick="speak('İyi değilim')">🔊</button></div>
+    </div>
+  </div>
+
+  <h2 class="sec-left">📍 Popular Destinations</h2>
+  <div class="dest-grid">
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">İstanbul</div><div class="dest-en">Istanbul</div></div><button class="speak-btn" onclick="speak('İstanbul')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="https://images.unsplash.com/photo-1558180077-09f158c76707?w=600&auto=format&fit=crop" alt="Istanbul">
+      <div class="place-row"><div><div class="place-tr">Ayasofya</div><div class="phr-en">Hagia Sophia</div></div><button class="speak-btn" onclick="speak('Ayasofya')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Galata Kulesi</div><div class="phr-en">Galata Tower</div></div><button class="speak-btn" onclick="speak('Galata Kulesi')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Boğaz</div><div class="phr-en">Bosphorus</div></div><button class="speak-btn" onclick="speak('Boğaz')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Kapalıçarşı</div><div class="phr-en">Grand Bazaar</div></div><button class="speak-btn" onclick="speak('Kapalıçarşı')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">Kapadokya</div><div class="dest-en">Cappadocia</div></div><button class="speak-btn" onclick="speak('Kapadokya')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="https://images.unsplash.com/photo-1604156789095-3348604c0f43?w=600&auto=format&fit=crop" alt="Cappadocia">
+      <div class="place-row"><div><div class="place-tr">Peri bacaları</div><div class="phr-en">Fairy chimneys</div></div><button class="speak-btn" onclick="speak('Peri bacaları')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Balon turu</div><div class="phr-en">Hot air balloon ride</div></div><button class="speak-btn" onclick="speak('Balon turu')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Derinkuyu</div><div class="phr-en">Underground city</div></div><button class="speak-btn" onclick="speak('Derinkuyu')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">Antalya</div><div class="dest-en">Antalya</div></div><button class="speak-btn" onclick="speak('Antalya')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="https://images.unsplash.com/photo-1648325129746-abcc1b872380?w=600&auto=format&fit=crop" alt="Antalya">
+      <div class="place-row"><div><div class="place-tr">Plaj</div><div class="phr-en">Beach</div></div><button class="speak-btn" onclick="speak('Plaj')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Kaleiçi</div><div class="phr-en">Old Town</div></div><button class="speak-btn" onclick="speak('Kaleiçi')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Düden Şelalesi</div><div class="phr-en">Düden Waterfall</div></div><button class="speak-btn" onclick="speak('Düden Şelalesi')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">İzmir</div><div class="dest-en">Izmir</div></div><button class="speak-btn" onclick="speak('İzmir')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="https://images.unsplash.com/photo-1701428588034-5893b2512a68?w=600&auto=format&fit=crop" alt="Izmir">
+      <div class="place-row"><div><div class="place-tr">Saat Kulesi</div><div class="phr-en">Clock Tower</div></div><button class="speak-btn" onclick="speak('Saat Kulesi')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Efes</div><div class="phr-en">Ephesus</div></div><button class="speak-btn" onclick="speak('Efes')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Kordon</div><div class="phr-en">Waterfront promenade</div></div><button class="speak-btn" onclick="speak('Kordon')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">Pamukkale</div><div class="dest-en">Pamukkale</div></div><button class="speak-btn" onclick="speak('Pamukkale')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="pamukkale.jpg" alt="Pamukkale">
+      <div class="place-row"><div><div class="place-tr">Traverten terasları</div><div class="phr-en">Travertine terraces</div></div><button class="speak-btn" onclick="speak('Traverten terasları')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Hierapolis</div><div class="phr-en">Ancient city of Hierapolis</div></div><button class="speak-btn" onclick="speak('Hierapolis')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">Bodrum</div><div class="dest-en">Bodrum</div></div><button class="speak-btn" onclick="speak('Bodrum')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="bodrum.jpg" alt="Bodrum">
+      <div class="place-row"><div><div class="place-tr">Bodrum Kalesi</div><div class="phr-en">Bodrum Castle</div></div><button class="speak-btn" onclick="speak('Bodrum Kalesi')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Gümbet Plajı</div><div class="phr-en">Gümbet Beach</div></div><button class="speak-btn" onclick="speak('Gümbet Plajı')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">Ankara</div><div class="dest-en">Ankara</div></div><button class="speak-btn" onclick="speak('Ankara')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="ankara.jpg" alt="Ankara">
+      <div class="place-row"><div><div class="place-tr">Anıtkabir</div><div class="phr-en">Atatürk's Mausoleum</div></div><button class="speak-btn" onclick="speak('Anıtkabir')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Ankara Kalesi</div><div class="phr-en">Ankara Castle</div></div><button class="speak-btn" onclick="speak('Ankara Kalesi')">🔊</button></div>
+    </div>
+    <div class="dest-card">
+      <div class="dest-head"><div><div class="dest-name">Fethiye</div><div class="dest-en">Fethiye</div></div><button class="speak-btn" onclick="speak('Fethiye')">🔊</button></div>
+      <img class="dest-img" loading="lazy" src="fethiye.jpg" alt="Fethiye">
+      <div class="place-row"><div><div class="place-tr">Ölüdeniz</div><div class="phr-en">Blue Lagoon (Ölüdeniz)</div></div><button class="speak-btn" onclick="speak('Ölüdeniz')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Yamaç paraşütü</div><div class="phr-en">Paragliding</div></div><button class="speak-btn" onclick="speak('Yamaç paraşütü')">🔊</button></div>
+      <div class="place-row"><div><div class="place-tr">Kelebekler Vadisi</div><div class="phr-en">Butterfly Valley</div></div><button class="speak-btn" onclick="speak('Kelebekler Vadisi')">🔊</button></div>
+    </div>
+  </div>
+</div>
+
+<div class="sec-title">🔗 Match It — Travel Words</div>
+<div class="match-box" id="match-game"></div>
+<div class="sec-title">📝 Test Your Knowledge — Travel</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const matchPairs=[{tr:'bilet',en:'ticket'},{tr:'havaalanı',en:'airport'},{tr:'otel',en:'hotel'},{tr:'tek yön',en:'one-way'},{tr:'kalkış',en:'departure'},{tr:'varış',en:'arrival'}];
+const quizQuestions=[
+  {type:'mc',question:'tek yön',options:['one-way','round trip','departure','arrival'],answer:'one-way'},
+  {type:'mc',question:'kalkış',options:['departure','arrival','gate','ticket'],answer:'departure'},
+  {type:'fill',sentence:'Rezervasyonum ___',answer:'var',hint:'I have a reservation'},
+  {type:'mc',question:'Kayboldum',options:["I'm lost","I'm tired","I need help","I'm hungry"],answer:"I'm lost"},
+  {type:'mc',question:'Düz git',options:['Go straight','Turn right','Turn left','Stop here'],answer:'Go straight'},
+  {type:'mc',question:'varış',options:['arrival','departure','ticket','transfer'],answer:'arrival'},
+  {type:'mc',question:'Peri bacaları are located in...',options:['Kapadokya','İstanbul','Antalya','İzmir'],answer:'Kapadokya'},
+  {type:'fill',sentence:'Ankara\'ya bilet almak ___',answer:'istiyorum',hint:'I want to buy a ticket to Ankara'},
+  {type:'mc',question:'Sağa dön',options:['Turn right','Turn left','Go straight','Go back'],answer:'Turn right'},
+  {type:'mc',question:'Anıtkabir is located in...',options:['Ankara','İstanbul','İzmir','Trabzon'],answer:'Ankara'},
+];
+renderMatchGame('match-game',matchPairs,'🔗 Match the travel vocabulary');
+renderQuiz('quiz-box',quizQuestions,'📝 Test Your Knowledge — Travel');
+</script>
+</body>
+</html>

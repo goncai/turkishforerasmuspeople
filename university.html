@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Turkish for campus life: academic vocabulary, Erasmus phrases, how to address lecturers (hocam) and real dialogues.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>University Communication — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .hero { display:flex; justify-content:center; padding:10px 0; }
+    .hero img { width:50%; max-height:150px; object-fit:cover; border-radius:10px; }
+    .sec { color:#E30A17; margin:24px 0 12px; font-size:18px; font-weight:bold; }
+    .wrap { padding:0 20px 30px; max-width:1100px; margin:0 auto; }
+    .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); text-align:left; }
+    .vocab-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:8px; }
+    .vocab-row { display:flex; align-items:center; justify-content:space-between; gap:8px; padding:8px 10px; background:#fff8f8; border-radius:8px; border:1px solid #fdd; }
+    .phrase-row { display:flex; align-items:center; justify-content:space-between; gap:10px; padding:10px 12px; background:#fff8f8; border-radius:8px; border:1px solid #fdd; margin-bottom:8px; }
+    .speak-btn { padding:4px 9px; background:#E30A17; color:white; border:none; border-radius:5px; cursor:pointer; font-size:13px; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .note-card { background:#fff5f5; border:2px solid #E30A17; border-radius:12px; padding:16px; text-align:left; }
+    .note-icon { font-size:22px; margin-bottom:6px; }
+    .note-title { font-weight:bold; color:#E30A17; margin-bottom:6px; }
+    .note-text { font-size:14px; color:#444; line-height:1.5; }
+    .notes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+    .hocam-card { background:#fff5f5; border:2px solid #E30A17; border-radius:12px; padding:20px; }
+    .hocam-inner { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:14px; margin-bottom:20px; }
+    .hocam-box { background:white; border-radius:10px; padding:16px; border:1px solid #fdd; }
+    .hocam-title { font-weight:bold; color:#E30A17; margin-bottom:8px; font-size:15px; }
+    .hocam-p { margin:0; font-size:14px; line-height:1.6; color:#333; }
+    .do-not { font-size:14px; color:#333; line-height:1.8; }
+    .dialogue { display:flex; flex-direction:column; gap:10px; }
+    .dlg-row-s { display:flex; flex-direction:row-reverse; align-items:flex-start; gap:10px; }
+    .dlg-row-o { display:flex; flex-direction:row; align-items:flex-start; gap:10px; }
+    .bubble-s { background:#E30A17; color:white; border-radius:14px 14px 0 14px; padding:10px 14px; max-width:70%; text-align:right; }
+    .bubble-o { background:#f4f4f4; color:#222; border-radius:14px 14px 14px 0; padding:10px 14px; max-width:70%; text-align:left; }
+    .blabel { font-size:11px; font-weight:bold; margin-bottom:4px; opacity:.75; }
+    .btr { font-weight:bold; margin-bottom:3px; }
+    .ben { font-size:13px; opacity:.85; }
+    .bbtn-s { margin-top:5px; padding:3px 8px; background:rgba(255,255,255,.2); color:white; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .bbtn-o { margin-top:5px; padding:3px 8px; background:rgba(0,0,0,.08); color:#333; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .dlg-card { margin-bottom:20px; }
+    .dlg-title { font-weight:bold; color:#E30A17; text-align:center; margin-bottom:4px; font-size:16px; }
+    .dlg-sub { color:#888; font-size:13px; text-align:center; margin-bottom:16px; font-style:italic; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🎓 University Communication</h1>
+  <p>Learn how to communicate in academic settings</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+<div class="hero"><img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=800&auto=format&fit=crop" alt="University"></div>
+
+<div class="wrap">
+
+  <h2 class="sec">📚 Key Vocabulary</h2>
+  <div class="card">
+    <div class="vocab-grid" id="vocab-grid"></div>
+  </div>
+
+  <h2 class="sec">🇪🇺 Erasmus Phrases</h2>
+  <div class="card" id="erasmus-phrases"></div>
+
+  <h2 class="sec">🌟 Cultural Notes for Erasmus Students</h2>
+  <div class="notes-grid" id="cultural-notes"></div>
+
+  <h2 class="sec">👩‍🏫 Understanding "Hocam"</h2>
+  <div class="hocam-card">
+    <div class="hocam-inner">
+      <div class="hocam-box">
+        <div class="hocam-title">📖 What does it mean?</div>
+        <p class="hocam-p"><strong>Hoca</strong> = teacher / professor<br><strong>-m</strong> = my (possessive suffix)<br><br>So <strong>hocam</strong> literally means <em>"my teacher"</em> or <em>"my professor"</em>. The possessive suffix shows respect and closeness at the same time — it is warm, not cold or distant.</p>
+      </div>
+      <div class="hocam-box">
+        <div class="hocam-title">🌍 How is it different in Turkey?</div>
+        <p class="hocam-p">In many European universities, calling a professor by their first name is normal and encouraged. In Turkey this is considered <strong>disrespectful</strong>. "Mr." or "Ms." are not used in Turkish academic culture either. <strong>Hocam</strong> is the safest form — it works for every lecturer, regardless of gender or rank. (You will also hear students use "hocam" with each other as a friendly joke.)</p>
+      </div>
+      <div class="hocam-box">
+        <div class="hocam-title">⚠️ Do NOT say...</div>
+        <div class="do-not">
+          ❌ <em>Ahmet</em> (first name)<br>
+          ❌ <em>Mr. Yılmaz / Ms. Öztürk</em><br>
+          ❌ <em>Teacher</em> (direct translation)<br>
+          ❌ <em>Professor</em> (alone, without -m)<br><br>
+          ✅ <strong>Hocam</strong> — always correct<br>
+          ✅ <strong>Ahmet Hoca</strong> — first name + Hoca, common when talking <em>about</em> a lecturer<br>
+          ✅ <strong>Prof. Dr. Ahmet Yılmaz</strong> — full title, used in emails
+        </div>
+      </div>
+    </div>
+    <div style="display:flex;align-items:center;justify-content:space-between;background:white;border-radius:10px;padding:14px 16px;border:1px solid #fdd;margin-top:4px;">
+      <div>
+        <div style="font-weight:bold;font-size:15px;">Hocam, bir şey sorabilir miyim?</div>
+        <div style="color:#555;font-size:13px;">Professor, can I ask you something?</div>
+      </div>
+      <button class="speak-btn" onclick="speak('Hocam, bir şey sorabilir miyim?')">🔊</button>
+    </div>
+  </div>
+
+  <h2 class="sec">🎭 Real-Life Dialogues</h2>
+  <div id="dialogues"></div>
+
+</div>
+
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">🔗 Match It — University Vocabulary</div>
+<div class="match-box" id="match-game"></div>
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">📝 Test Your Knowledge — University</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const vocabulary = [
+  {tr:'ders',en:'course'},{tr:'hoca / öğretim görevlisi',en:'lecturer'},{tr:'sınıf',en:'classroom'},
+  {tr:'ödev',en:'assignment'},{tr:'sınav',en:'exam'},{tr:'not',en:'grade'},
+  {tr:'akademik takvim',en:'academic calendar'},{tr:'devam zorunluluğu',en:'attendance requirement'},
+  {tr:'ders programı',en:'course schedule'},{tr:'kredi',en:'credit'},
+  {tr:'öğrenci işleri',en:'student affairs office'},{tr:'transkript',en:'transcript'},
+  {tr:'kayıt',en:'registration / enrollment'},{tr:'ders eşdeğerliği',en:'course equivalency'},
+  {tr:'Erasmus koordinatörü',en:'Erasmus coordinator'},{tr:'öğrenci kimliği',en:'student ID'},
+];
+const vg = document.getElementById('vocab-grid');
+vocabulary.forEach(v => {
+  vg.innerHTML += `<div class="vocab-row"><div><div style="font-weight:bold;font-size:14px;">${v.tr}</div><div style="color:#555;font-size:13px;">${v.en}</div></div><button class="speak-btn" onclick="speak('${v.tr.replace(/'/g,"\\'")}')">🔊</button></div>`;
+});
+
+const erasmusPhrases = [
+  {tr:"Learning agreement'ımı onaylatmam gerekiyor.",en:'I need to get my learning agreement approved.'},
+  {tr:'Ders eşdeğerliğini nasıl yapabilirim?',en:'How can I arrange course equivalency?'},
+  {tr:'Erasmus koordinatörünüz kim?',en:'Who is your Erasmus coordinator?'},
+  {tr:'Transkriptimi nasıl alabilirim?',en:'How can I get my transcript?'},
+  {tr:'Öğrenci işleri nerede?',en:'Where is the student affairs office?'},
+  {tr:'Derse nasıl kayıt olabilirim?',en:'How can I register for a course?'},
+  {tr:'Sınav ne zaman?',en:'When is the exam?'},
+  {tr:'Notumu öğrenebilir miyim?',en:'Can I find out my grade?'},
+  {tr:'Bu ders zor mu?',en:'Is this class hard?'},
+];
+const ep = document.getElementById('erasmus-phrases');
+ep.innerHTML = '<div style="display:flex;flex-direction:column;gap:10px;">' + erasmusPhrases.map(p=>`<div class="phrase-row"><div><div style="font-weight:bold;">${p.tr}</div><div style="color:#555;font-size:13px;">${p.en}</div></div><button class="speak-btn" onclick="speak('${p.tr.replace(/'/g,"\\'")}')">🔊</button></div>`).join('') + '</div>';
+
+const culturalNotes = [
+  {icon:'📅',title:'Attendance Rules',note:'Missing more than 30% of classes typically means automatic failure — regardless of your exam grade. Always check each course\'s devam zorunluluğu.'},
+  {icon:'📊',title:'Turkish Grading System',note:'Grades run AA (4.0) → BA (3.5) → BB (3.0) → CB (2.5) → CC (2.0) → DC (1.5) → DD (1.0) → FF (fail). The exact scale can differ between universities, so check your course catalogue. Your home university will convert these.'},
+  {icon:'📝',title:'Course Equivalency',note:'Agree on ders eşdeğerliği with your Erasmus coordinator before classes start. Changes mid-semester are difficult and require extra paperwork.'},
+];
+const cn = document.getElementById('cultural-notes');
+culturalNotes.forEach(n => { cn.innerHTML += `<div class="note-card"><div class="note-icon">${n.icon}</div><div class="note-title">${n.title}</div><div class="note-text">${n.note}</div></div>`; });
+
+const dialogues = [
+  {title:'👩‍🏫 Scenario 1: Office Hours with a Lecturer',sub:'Hoca ile Görüşme',lines:[
+    {s:'student',label:'👤 You',tr:'Hocam, bir dakikanız var mı?',en:'Professor, do you have a minute?'},
+    {s:'officer',label:'👩‍🏫 Lecturer',tr:'Tabii, buyrun oturun.',en:'Of course, please sit down.'},
+    {s:'student',label:'👤 You',tr:'Sınav notumu göremedim, kontrol edebilir miyim?',en:"I couldn't see my exam grade, can I check it?"},
+    {s:'officer',label:'👩‍🏫 Lecturer',tr:"Sisteme henüz girmedim, yarına kadar gireceğim.",en:"I haven't entered it into the system yet, I'll enter it by tomorrow."},
+    {s:'student',label:'👤 You',tr:'Peki, ödevimi bir hafta sonra teslim edebilir miyim?',en:'OK, can I submit my assignment one week late?'},
+    {s:'officer',label:'👩‍🏫 Lecturer',tr:'Bu sefer olur ama bir daha erken teslim edin.',en:"This time it's fine but submit earlier next time."},
+    {s:'student',label:'👤 You',tr:'Çok teşekkür ederim hocam.',en:'Thank you very much, professor.'},
+  ]},
+  {title:'🏫 Scenario 2: At the Student Affairs Office',sub:'Öğrenci İşlerinde',lines:[
+    {s:'student',label:'👤 You',tr:'Merhaba, resmi transkript almak istiyorum.',en:'Hello, I would like to get an official transcript.'},
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Öğrenci numaranız nedir?',en:'What is your student number?'},
+    {s:'student',label:'👤 You',tr:'Numaramı bilmiyorum, öğrenci kimliğimi göstereyim.',en:"I don't know my number, let me show my student ID."},
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Tamam, transkript iki gün içinde hazır olur.',en:'OK, the transcript will be ready within two days.'},
+    {s:'student',label:'👤 You',tr:'İngilizce versiyonu da alabilir miyim?',en:'Can I also get an English version?'},
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Evet, ikisi birlikte hazırlanır.',en:'Yes, both will be prepared together.'},
+    {s:'student',label:'👤 You',tr:'Çok teşekkür ederim.',en:'Thank you very much.'},
+  ]},
+  {title:'👥 Scenario 3: Talking to Classmates',sub:'Sınıf Arkadaşlarıyla',lines:[
+    {s:'officer',label:'👥 Classmate',tr:'Merhaba, sen Erasmus öğrencisi misin?',en:'Hi, are you an Erasmus student?'},
+    {s:'student',label:'👤 You',tr:"Evet, bu dönem buradayım. Sen hangi bölümdesin?",en:"Yes, I'm here this semester. Which department are you in?"},
+    {s:'officer',label:'👥 Classmate',tr:'İşletme bölümündeyim. Bu derste grup ödevi var.',en:"I'm in the Business department. There's a group assignment in this class."},
+    {s:'student',label:'👤 You',tr:'Grubunuza katılabilir miyim?',en:'Can I join your group?'},
+    {s:'officer',label:'👥 Classmate',tr:'Tabii ki! Bu hafta toplantımız var, gelir misin?',en:'Of course! We have a meeting this week, will you come?'},
+    {s:'student',label:'👤 You',tr:'Evet, ne zaman ve nerede?',en:'Yes, when and where?'},
+  ]},
+];
+const dc = document.getElementById('dialogues');
+dialogues.forEach(d => {
+  let html = `<div class="card dlg-card"><div class="dlg-title">${d.title}</div><div class="dlg-sub">${d.sub}</div><div class="dialogue">`;
+  d.lines.forEach(l => {
+    const isS = l.s === 'student';
+    html += `<div class="${isS?'dlg-row-s':'dlg-row-o'}">
+      <div class="${isS?'bubble-s':'bubble-o'}">
+        <div class="blabel">${l.label}</div>
+        <div class="btr">${l.tr}</div>
+        <div class="ben">${l.en}</div>
+      </div>
+      <button class="${isS?'bbtn-s':'bbtn-o'}" onclick="speak('${l.tr.replace(/'/g,"\\'")}')">🔊</button>
+    </div>`;
+  });
+  html += '</div></div>';
+  dc.innerHTML += html;
+});
+
+const matchPairs = [
+  {tr:'ders',en:'course'},{tr:'ödev',en:'assignment'},{tr:'sınav',en:'exam'},
+  {tr:'not',en:'grade'},{tr:'hoca',en:'lecturer'},{tr:'kredi',en:'credit'},
+];
+const quizQuestions = [
+  {type:'mc',question:'ödev',options:['assignment','exam','grade','course'],answer:'assignment'},
+  {type:'mc',question:'devam zorunluluğu',options:['attendance requirement','homework','exam','grade'],answer:'attendance requirement'},
+  {type:'fill',sentence:'Sınav ne ___?',answer:'zaman',hint:'When is the exam?'},
+  {type:'mc',question:'hoca',options:['lecturer','student','exam','grade'],answer:'lecturer'},
+  {type:'fill',sentence:'Notumu öğrenebilir ___?',answer:'miyim',hint:'Can I find out my grade?'},
+  {type:'mc',question:'ders eşdeğerliği',options:['course equivalency','transcript','registration','grade'],answer:'course equivalency'},
+  {type:'mc',question:'öğrenci işleri',options:['student affairs office','classroom','exam','library'],answer:'student affairs office'},
+  {type:'mc',question:'transkript',options:['transcript','assignment','credit','attendance'],answer:'transcript'},
+  {type:'fill',sentence:'Bu ders zor ___?',answer:'mu',hint:'Is this class hard?'},
+  {type:'mc',question:'How do students address teachers in Turkey?',options:['Hocam','Mr./Ms.','First name','Teacher'],answer:'Hocam'},
+];
+renderMatchGame('match-game', matchPairs, '🔗 Match the university vocabulary');
+renderQuiz('quiz-box', quizQuestions, '📝 Test Your Knowledge — University');
+</script>
+</body>
+</html>

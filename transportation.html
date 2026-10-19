@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use public transport in Türkiye: buses, metro, dolmuş, ferries, travel cards and phrases for when you get lost.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Public Transportation — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .hero { display:flex; justify-content:center; padding:10px 0; }
+    .hero img { width:50%; max-height:150px; object-fit:cover; border-radius:10px; }
+    .sec { color:#E30A17; margin:24px 0 10px; font-size:18px; text-align:center; font-weight:bold; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; padding:0 20px; }
+    .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; text-align:left; }
+    .card-title { color:#E30A17; margin-bottom:10px; text-align:center; font-weight:bold; }
+    .word-row { display:flex; align-items:center; justify-content:space-between; margin:8px 0; }
+    .word-tr { font-weight:normal; }
+    .word-en { color:#444; font-size:14px; margin-bottom:5px; }
+    .speak-btn { padding:6px 10px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .phrase-row { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#fff8f8; border-radius:8px; padding:10px 12px; border:1px solid #fdd; margin-bottom:8px; }
+    .emergency-box { background:#fff5f5; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:0 20px; }
+    .emg-row { display:flex; align-items:center; justify-content:space-between; gap:10px; background:white; border-radius:8px; padding:10px 12px; border:1px solid #fdd; margin-bottom:8px; }
+    .dialogue { display:flex; flex-direction:column; gap:10px; }
+    .dlg-s { display:flex; flex-direction:row-reverse; gap:10px; align-items:flex-end; }
+    .dlg-o { display:flex; flex-direction:row; gap:10px; align-items:flex-end; }
+    .bub-s { max-width:72%; background:#E30A17; color:white; border-radius:12px; padding:10px 14px; text-align:left; }
+    .bub-o { max-width:72%; background:#f0f0f0; color:#222; border-radius:12px; padding:10px 14px; text-align:left; }
+    .btr { font-size:14px; font-weight:bold; margin-bottom:3px; }
+    .ben { font-size:12px; opacity:.85; }
+    .bbtn-s { margin-top:6px; padding:3px 8px; background:rgba(255,255,255,.2); color:white; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .bbtn-o { margin-top:6px; padding:3px 8px; background:rgba(0,0,0,.08); color:#333; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🚇 Public Transportation</h1>
+  <p>Learn how to use transportation in Türkiye</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+<div class="hero"><img src="https://images.unsplash.com/photo-1619481165097-273958498deb?w=800&auto=format&fit=crop" alt="Transportation"></div>
+
+<div style="padding:0 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:15px;">
+  <div class="card">
+    <div class="card-title">🚌 Transportation Types</div>
+    <div class="word-row"><div><div>otobüs</div><div class="word-en">bus</div></div><button class="speak-btn" onclick="speak('otobüs')">🔊</button></div>
+    <div class="word-row"><div><div>metro</div><div class="word-en">metro / subway</div></div><button class="speak-btn" onclick="speak('metro')">🔊</button></div>
+    <div class="word-row"><div><div>tramvay</div><div class="word-en">tram</div></div><button class="speak-btn" onclick="speak('tramvay')">🔊</button></div>
+    <div class="word-row"><div><div>tren</div><div class="word-en">train</div></div><button class="speak-btn" onclick="speak('tren')">🔊</button></div>
+    <div class="word-row"><div><div>dolmuş</div><div class="word-en">shared minibus</div></div><button class="speak-btn" onclick="speak('dolmuş')">🔊</button></div>
+    <div class="word-row"><div><div>taksi</div><div class="word-en">taxi</div></div><button class="speak-btn" onclick="speak('taksi')">🔊</button></div>
+    <div class="word-row"><div><div>feribot</div><div class="word-en">ferry</div></div><button class="speak-btn" onclick="speak('feribot')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">📍 Istanbul Transportation</div>
+    <div class="word-row"><div><div>Marmaray</div><div class="word-en">Intercontinental train line (Europe ↔ Asia)</div></div><button class="speak-btn" onclick="speak('Marmaray')">🔊</button></div>
+    <div class="word-row"><div><div>Metrobüs</div><div class="word-en">Bus rapid transit system in İstanbul</div></div><button class="speak-btn" onclick="speak('Metrobüs')">🔊</button></div>
+    <div class="word-row"><div><div>Vapur</div><div class="word-en">Ferry across Bosphorus</div></div><button class="speak-btn" onclick="speak('Vapur')">🔊</button></div>
+    <div class="word-row"><div><div>İstanbulkart</div><div class="word-en">Travel card for all public transport — buy and top up at kiosks</div></div><button class="speak-btn" onclick="speak('İstanbulkart')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">📍 Izmir Transportation</div>
+    <div class="word-row"><div><div>İZBAN</div><div class="word-en">Suburban train line</div></div><button class="speak-btn" onclick="speak('İZBAN')">🔊</button></div>
+    <div class="word-row"><div><div>Tramvay</div><div class="word-en">Tram system</div></div><button class="speak-btn" onclick="speak('Tramvay')">🔊</button></div>
+    <div class="word-row"><div><div>Vapur</div><div class="word-en">Ferry transport</div></div><button class="speak-btn" onclick="speak('Vapur')">🔊</button></div>
+    <div class="word-row"><div><div>İzmirim Kart</div><div class="word-en">Travel card for buses, metro, İZBAN and ferries</div></div><button class="speak-btn" onclick="speak('İzmirim Kart')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">📍 Ankara Transportation</div>
+    <div class="word-row"><div><div>Ankaray</div><div class="word-en">Light rail system</div></div><button class="speak-btn" onclick="speak('Ankaray')">🔊</button></div>
+    <div class="word-row"><div><div>Metro</div><div class="word-en">Subway system</div></div><button class="speak-btn" onclick="speak('Metro')">🔊</button></div>
+    <div class="word-row"><div><div>Otobüs</div><div class="word-en">Bus network</div></div><button class="speak-btn" onclick="speak('Otobüs')">🔊</button></div>
+    <div class="word-row"><div><div>AnkaraKart</div><div class="word-en">Travel card for buses, metro and Ankaray</div></div><button class="speak-btn" onclick="speak('AnkaraKart')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🎓 Student Discount</div>
+    <div class="word-row"><div><div>öğrenci kartı</div><div class="word-en">Discounted student travel card — ask your university's international office whether Erasmus students can apply</div></div><button class="speak-btn" onclick="speak('öğrenci kartı')">🔊</button></div>
+    <div class="word-row"><div><div>kart dolumu</div><div class="word-en">topping up a travel card</div></div><button class="speak-btn" onclick="speak('kart dolumu')">🔊</button></div>
+    <div class="word-row"><div><div>Kartıma para yüklemek istiyorum.</div><div class="word-en">I want to top up my card.</div></div><button class="speak-btn" onclick="speak('Kartıma para yüklemek istiyorum.')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🧭 Directions & Stops</div>
+    <div class="word-row"><div><div>durak</div><div class="word-en">stop</div></div><button class="speak-btn" onclick="speak('durak')">🔊</button></div>
+    <div class="word-row"><div><div>istasyon</div><div class="word-en">station</div></div><button class="speak-btn" onclick="speak('istasyon')">🔊</button></div>
+    <div class="word-row"><div><div>hat</div><div class="word-en">line</div></div><button class="speak-btn" onclick="speak('hat')">🔊</button></div>
+    <div class="word-row"><div><div>aktarma</div><div class="word-en">transfer</div></div><button class="speak-btn" onclick="speak('aktarma')">🔊</button></div>
+    <div class="word-row"><div><div>tek yön</div><div class="word-en">one way</div></div><button class="speak-btn" onclick="speak('tek yön')">🔊</button></div>
+    <div class="word-row"><div><div>gidiş-dönüş</div><div class="word-en">round trip</div></div><button class="speak-btn" onclick="speak('gidiş-dönüş')">🔊</button></div>
+  </div>
+</div>
+
+<h2 class="sec">🗣️ Useful Sentences</h2>
+<div style="padding:0 20px;">
+  <div class="card">
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Bu metro nereye gidiyor?</div><div style="color:#555;font-size:13px;">Where does this metro go?</div></div><button class="speak-btn" onclick="speak('Bu metro nereye gidiyor?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Hangi durakta ineceğim?</div><div style="color:#555;font-size:13px;">At which stop should I get off?</div></div><button class="speak-btn" onclick="speak('Hangi durakta ineceğim?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Aktarma yapmam gerekiyor mu?</div><div style="color:#555;font-size:13px;">Do I need to transfer?</div></div><button class="speak-btn" onclick="speak('Aktarma yapmam gerekiyor mu?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Bu hat şehir merkezine gidiyor mu?</div><div style="color:#555;font-size:13px;">Does this line go to the city center?</div></div><button class="speak-btn" onclick="speak('Bu hat şehir merkezine gidiyor mu?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Bilet nereden alınır?</div><div style="color:#555;font-size:13px;">Where can I buy a ticket?</div></div><button class="speak-btn" onclick="speak('Bilet nereden alınır?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Kaç durak sonra ineceğim?</div><div style="color:#555;font-size:13px;">How many stops until I get off?</div></div><button class="speak-btn" onclick="speak('Kaç durak sonra ineceğim?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Son sefer saat kaçta?</div><div style="color:#555;font-size:13px;">What time is the last departure?</div></div><button class="speak-btn" onclick="speak('Son sefer saat kaçta?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Bu otobüs üniversiteye gidiyor mu?</div><div style="color:#555;font-size:13px;">Does this bus go to the university?</div></div><button class="speak-btn" onclick="speak('Bu otobüs üniversiteye gidiyor mu?')">🔊</button></div>
+  </div>
+</div>
+
+<h2 class="sec">🆘 "I'm Lost" — Emergency Phrases</h2>
+<div class="emergency-box">
+  <p style="margin:0 0 14px;font-size:13px;color:#555;font-weight:normal;line-height:1.5;">Don't panic. These phrases will help you get back on track when you've missed your stop or boarded the wrong vehicle.</p>
+  <div class="emg-row"><div><div style="font-weight:bold;font-size:14px;">Yanlış otobüse bindim.</div><div style="color:#555;font-size:13px;">I got on the wrong bus.</div></div><button class="speak-btn" onclick="speak('Yanlış otobüse bindim.')">🔊</button></div>
+  <div class="emg-row"><div><div style="font-weight:bold;font-size:14px;">Durağımı kaçırdım.</div><div style="color:#555;font-size:13px;">I missed my stop.</div></div><button class="speak-btn" onclick="speak('Durağımı kaçırdım.')">🔊</button></div>
+  <div class="emg-row"><div><div style="font-weight:bold;font-size:14px;">Kayboldum, yardım edebilir misiniz?</div><div style="color:#555;font-size:13px;">I'm lost, can you help me?</div></div><button class="speak-btn" onclick="speak('Kayboldum, yardım edebilir misiniz?')">🔊</button></div>
+  <div class="emg-row"><div><div style="font-weight:bold;font-size:14px;">En yakın metro istasyonu nerede?</div><div style="color:#555;font-size:13px;">Where is the nearest metro station?</div></div><button class="speak-btn" onclick="speak('En yakın metro istasyonu nerede?')">🔊</button></div>
+  <div class="emg-row"><div><div style="font-weight:bold;font-size:14px;">Burası Atatürk Caddesi mi?</div><div style="color:#555;font-size:13px;">Is this Atatürk Street? (replace with your street name)</div></div><button class="speak-btn" onclick="speak('Burası Atatürk Caddesi mi?')">🔊</button></div>
+  <div class="emg-row"><div><div style="font-weight:bold;font-size:14px;">Beni doğru yöne yönlendirir misiniz?</div><div style="color:#555;font-size:13px;">Can you point me in the right direction?</div></div><button class="speak-btn" onclick="speak('Beni doğru yöne yönlendirir misiniz?')">🔊</button></div>
+</div>
+
+<h2 class="sec">🎭 Real-Life Dialogue — Asking for Directions</h2>
+<div style="padding:0 20px;">
+  <div class="card">
+    <p style="margin:0 0 14px;font-size:13px;color:#555;font-weight:normal;text-align:center;font-style:italic;">At a bus stop — asking a local for help</p>
+    <div class="dialogue">
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Affedersiniz, bu otobüs Kadıköy'e gidiyor mu?</div><div class="ben">Excuse me, does this bus go to Kadıköy?</div><button class="bbtn-s" onclick="speak('Affedersiniz, bu otobüs Kadıköy\'e gidiyor mu?')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">👤</div><div class="bub-o"><div class="btr">Hayır, direkt gitmiyor. Aktarma yapmanız gerekiyor.</div><div class="ben">No, it doesn't go directly. You need to transfer.</div><button class="bbtn-o" onclick="speak('Hayır, direkt gitmiyor. Aktarma yapmanız gerekiyor.')">🔊</button></div></div>
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Nerede aktarma yapacağım?</div><div class="ben">Where do I transfer?</div><button class="bbtn-s" onclick="speak('Nerede aktarma yapacağım?')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">👤</div><div class="bub-o"><div class="btr">Üçüncü durakta inin, orada metro var.</div><div class="ben">Get off at the third stop, there's a metro there.</div><button class="bbtn-o" onclick="speak('Üçüncü durakta inin, orada metro var.')">🔊</button></div></div>
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Teşekkür ederim, çok yardımcı oldunuz.</div><div class="ben">Thank you, you were very helpful.</div><button class="bbtn-s" onclick="speak('Teşekkür ederim, çok yardımcı oldunuz.')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">👤</div><div class="bub-o"><div class="btr">Rica ederim, iyi yolculuklar!</div><div class="ben">You're welcome, have a good journey!</div><button class="bbtn-o" onclick="speak('Rica ederim, iyi yolculuklar!')">🔊</button></div></div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">🔗 Match It — Transportation</div>
+<div class="match-box" id="match-game"></div>
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">📝 Test Your Knowledge — Transportation</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const matchPairs=[{tr:'dolmuş',en:'shared minibus'},{tr:'feribot',en:'ferry'},{tr:'durak',en:'stop'},{tr:'aktarma',en:'transfer'},{tr:'istasyon',en:'station'},{tr:'gidiş-dönüş',en:'round trip'}];
+const quizQuestions=[
+  {type:'mc',question:'dolmuş',options:['shared minibus','ferry','tram','taxi'],answer:'shared minibus'},
+  {type:'mc',question:'aktarma',options:['transfer','stop','line','station'],answer:'transfer'},
+  {type:'fill',sentence:'Bu metro nereye ___?',answer:'gidiyor',hint:'Where does this metro go?'},
+  {type:'mc',question:'durak',options:['stop','station','line','transfer'],answer:'stop'},
+  {type:'fill',sentence:'Aktarma yapmam gerekiyor ___?',answer:'mu',hint:'Do I need to transfer?'},
+  {type:'mc',question:'feribot',options:['ferry','bus','tram','train'],answer:'ferry'},
+  {type:'mc',question:'istasyon',options:['station','stop','line','transfer'],answer:'station'},
+  {type:'mc',question:'Marmaray connects...',options:['Europe and Asia','Istanbul and Ankara','Izmir and Antalya','Asia and Africa'],answer:'Europe and Asia'},
+  {type:'fill',sentence:'Hangi durakta ___?',answer:'ineceğim',hint:'At which stop should I get off?'},
+  {type:'mc',question:'gidiş-dönüş',options:['round trip','one way','transfer','line'],answer:'round trip'},
+];
+renderMatchGame('match-game',matchPairs,'🔗 Match the transportation vocabulary');
+renderQuiz('quiz-box',quizQuestions,'📝 Test Your Knowledge — Transportation');
+</script>
+</body>
+</html>

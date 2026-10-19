@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Turkish for housing and the residence permit process: rental vocabulary, migration office phrases and dialogues.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Residence — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .hero { display:flex; justify-content:center; padding:10px 0; }
+    .hero img { width:50%; max-height:150px; object-fit:cover; border-radius:10px; }
+    .sec { color:#E30A17; margin:20px 0 0; font-size:20px; font-weight:bold; text-align:center; }
+    .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); text-align:left; }
+    .vocab-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:15px; padding:15px 20px 20px; }
+    .vocab-card { border:2px solid #E30A17; padding:20px; border-radius:10px; box-shadow:0 3px 8px rgba(0,0,0,.1); text-align:center; }
+    .vocab-tr { font-size:1.2rem; font-weight:bold; color:#E30A17; }
+    .vocab-en { margin-top:6px; color:#555; }
+    .speak-btn { padding:4px 9px; background:#E30A17; color:white; border:none; border-radius:5px; cursor:pointer; font-size:13px; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .speak-btn-lg { margin-top:10px; padding:8px 12px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; }
+    .speak-btn-lg:hover { background:#b30812; }
+    .office-grid { padding:15px 20px 10px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; }
+    .card-title { font-weight:bold; color:#E30A17; margin-bottom:10px; text-align:center; }
+    .table-wrap { width:100%; border-collapse:collapse; }
+    .table-wrap td { padding:5px; border-bottom:1px solid #ddd; font-size:14px; }
+    .phrase-row { display:flex; align-items:flex-start; justify-content:space-between; gap:8px; margin-bottom:12px; }
+    .dialogues-wrap { padding:15px 20px 30px; display:flex; flex-direction:column; gap:20px; }
+    .dlg-title { font-weight:bold; color:#E30A17; text-align:center; margin-bottom:4px; font-size:16px; }
+    .dlg-sub { color:#888; font-size:13px; text-align:center; margin-bottom:16px; font-style:italic; }
+    .dlg-line-s { display:flex; flex-direction:row-reverse; align-items:flex-start; gap:10px; }
+    .dlg-line-o { display:flex; flex-direction:row; align-items:flex-start; gap:10px; }
+    .bubble-s { background:#E30A17; color:white; border-radius:14px 14px 0 14px; padding:10px 14px; max-width:70%; text-align:right; }
+    .bubble-o { background:#f4f4f4; color:#222; border-radius:14px 14px 14px 0; padding:10px 14px; max-width:70%; text-align:left; }
+    .blabel { font-size:11px; font-weight:bold; margin-bottom:4px; opacity:.75; }
+    .btr { font-weight:bold; margin-bottom:3px; }
+    .ben { font-size:13px; opacity:.85; }
+    .bbtn-s { margin-top:5px; padding:3px 8px; background:rgba(255,255,255,.2); color:white; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .bbtn-o { margin-top:5px; padding:3px 8px; background:rgba(0,0,0,.08); color:#333; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🏠 Residence & Migration</h1>
+  <p>Communicate in official procedures</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+<div class="hero"><img src="https://images.unsplash.com/photo-1560520031-3a4dc4e9de0c?w=800&auto=format&fit=crop" alt="Residence"></div>
+
+<h2 class="sec">🏘️ Housing Vocabulary</h2>
+<div class="vocab-grid">
+  <div class="vocab-card"><div class="vocab-tr">İkamet</div><div class="vocab-en">Residence</div><button class="speak-btn-lg" onclick="speak('İkamet')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Kira</div><div class="vocab-en">Rent</div><button class="speak-btn-lg" onclick="speak('Kira')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Apartman</div><div class="vocab-en">Apartment building</div><button class="speak-btn-lg" onclick="speak('Apartman')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Daire</div><div class="vocab-en">Flat / Apartment</div><button class="speak-btn-lg" onclick="speak('Daire')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Komşu</div><div class="vocab-en">Neighbour</div><button class="speak-btn-lg" onclick="speak('Komşu')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Anahtar</div><div class="vocab-en">Key</div><button class="speak-btn-lg" onclick="speak('Anahtar')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Kira sözleşmesi</div><div class="vocab-en">Rental contract</div><button class="speak-btn-lg" onclick="speak('Kira sözleşmesi')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Depozito</div><div class="vocab-en">Deposit</div><button class="speak-btn-lg" onclick="speak('Depozito')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Su faturası</div><div class="vocab-en">Water bill</div><button class="speak-btn-lg" onclick="speak('Su faturası')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Elektrik faturası</div><div class="vocab-en">Electricity bill</div><button class="speak-btn-lg" onclick="speak('Elektrik faturası')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Isıtma</div><div class="vocab-en">Heating</div><button class="speak-btn-lg" onclick="speak('Isıtma')">🔊</button></div>
+  <div class="vocab-card"><div class="vocab-tr">Mobilya</div><div class="vocab-en">Furniture</div><button class="speak-btn-lg" onclick="speak('Mobilya')">🔊</button></div>
+</div>
+
+<h2 class="sec">🏢 Migration Office</h2>
+<div class="office-grid">
+  <div class="card">
+    <div class="card-title">📄 Key Vocabulary</div>
+    <table class="table-wrap"><tbody>
+      <tr><td>ikamet izni</td><td>residence permit</td><td><button class="speak-btn" onclick="speak('ikamet izni')">🔊</button></td></tr>
+      <tr><td>göç idaresi</td><td>migration office</td><td><button class="speak-btn" onclick="speak('göç idaresi')">🔊</button></td></tr>
+      <tr><td>başvuru</td><td>application</td><td><button class="speak-btn" onclick="speak('başvuru')">🔊</button></td></tr>
+      <tr><td>randevu</td><td>appointment</td><td><button class="speak-btn" onclick="speak('randevu')">🔊</button></td></tr>
+      <tr><td>belge</td><td>document</td><td><button class="speak-btn" onclick="speak('belge')">🔊</button></td></tr>
+      <tr><td>form</td><td>form</td><td><button class="speak-btn" onclick="speak('form')">🔊</button></td></tr>
+      <tr><td>pasaport</td><td>passport</td><td><button class="speak-btn" onclick="speak('pasaport')">🔊</button></td></tr>
+      <tr><td>ikamet kartı</td><td>residence card</td><td><button class="speak-btn" onclick="speak('ikamet kartı')">🔊</button></td></tr>
+      <tr><td>adres</td><td>address</td><td><button class="speak-btn" onclick="speak('adres')">🔊</button></td></tr>
+      <tr><td>sigorta</td><td>insurance</td><td><button class="speak-btn" onclick="speak('sigorta')">🔊</button></td></tr>
+    </tbody></table>
+  </div>
+  <div class="card">
+    <div class="card-title">🆘 Survival Phrases</div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Anlamadım</div><div style="color:#555;font-size:14px;">I don't understand</div></div><button class="speak-btn" onclick="speak('Anlamadım')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Yavaş konuşabilir misiniz?</div><div style="color:#555;font-size:14px;">Could you speak slowly?</div></div><button class="speak-btn" onclick="speak('Yavaş konuşabilir misiniz?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Tekrar eder misiniz?</div><div style="color:#555;font-size:14px;">Could you repeat that?</div></div><button class="speak-btn" onclick="speak('Tekrar eder misiniz?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">İngilizce biliyor musunuz?</div><div style="color:#555;font-size:14px;">Do you speak English?</div></div><button class="speak-btn" onclick="speak('İngilizce biliyor musunuz?')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">📝 At the Counter</div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Randevum var.</div><div style="color:#555;font-size:14px;">I have an appointment.</div></div><button class="speak-btn" onclick="speak('Randevum var.')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Hangi belgeler gerekli?</div><div style="color:#555;font-size:14px;">What documents are required?</div></div><button class="speak-btn" onclick="speak('Hangi belgeler gerekli?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Kart ne zaman gelir?</div><div style="color:#555;font-size:14px;">When will the card arrive?</div></div><button class="speak-btn" onclick="speak('Kart ne zaman gelir?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;">Formu nasıl doldurabilirim?</div><div style="color:#555;font-size:14px;">How can I fill out the form?</div></div><button class="speak-btn" onclick="speak('Formu nasıl doldurabilirim?')">🔊</button></div>
+  </div>
+</div>
+
+<h2 class="sec">🎭 Real-Life Dialogues</h2>
+<div class="dialogues-wrap" id="dialogues"></div>
+
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">🔗 Match It — Residence Vocabulary</div>
+<div class="match-box" id="match-game"></div>
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">📝 Test Your Knowledge — Residence</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const dialogues = [
+  {title:'🏢 Scenario 1: At the Migration Office',sub:'Göç İdaresinde',lines:[
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Hoş geldiniz, nasıl yardımcı olabilirim?',en:'Welcome, how can I help you?'},
+    {s:'student',label:'👤 You',tr:'İkamet izni başvurusu yapmak istiyorum.',en:'I would like to apply for a residence permit.'},
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Belgeleriniz hazır mı?',en:'Are your documents ready?'},
+    {s:'student',label:'👤 You',tr:'Evet, işte pasaportum, sigortam ve kira sözleşmem.',en:'Yes, here is my passport, insurance and rental contract.'},
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Formu doldurdunuz mu?',en:'Have you filled out the form?'},
+    {s:'student',label:'👤 You',tr:'Evet, doldurdum.',en:'Yes, I filled it out.'},
+    {s:'officer',label:'🧑‍💼 Officer',tr:'Kart adresinize gelecek, iki ila dört hafta sürebilir.',en:'The card will come to your address, it may take two to four weeks.'},
+    {s:'student',label:'👤 You',tr:'Teşekkür ederim.',en:'Thank you.'},
+  ]},
+  {title:'🏠 Scenario 2: Signing the Rental Contract',sub:'Ev Sahibiyle Görüşme',lines:[
+    {s:'officer',label:'🏠 Landlord',tr:'Merhaba, buyrun içeri.',en:'Hello, please come in.'},
+    {s:'student',label:'👤 You',tr:'Merhaba, dairenizi görmek istiyorum.',en:'Hello, I would like to see the apartment.'},
+    {s:'officer',label:'🏠 Landlord',tr:'Tabii. Kira aylık beş bin lira.',en:'Of course. Rent is five thousand lira per month.'},
+    {s:'student',label:'👤 You',tr:'Depozito ne kadar?',en:'How much is the deposit?'},
+    {s:'officer',label:'🏠 Landlord',tr:'Bir aylık depozito istiyorum.',en:"I want one month's deposit."},
+    {s:'student',label:'👤 You',tr:'Kira sözleşmesini imzalayabilir miyiz?',en:'Can we sign the rental contract?'},
+    {s:'officer',label:'🏠 Landlord',tr:'Evet, buyrun imzalayın.',en:'Yes, please sign here.'},
+    {s:'student',label:'👤 You',tr:'Anahtarları alabilir miyim?',en:'Can I get the keys?'},
+  ]},
+  {title:'👋 Scenario 3: Meeting Your Neighbour',sub:'Komşuyla Tanışma',lines:[
+    {s:'officer',label:'👋 Neighbour',tr:'Merhaba, siz yeni komşumuz musunuz?',en:'Hello, are you our new neighbour?'},
+    {s:'student',label:'👤 You',tr:"Evet, merhaba! Ben Erasmus öğrencisiyim.",en:"Yes, hello! I'm an Erasmus student."},
+    {s:'officer',label:'👋 Neighbour',tr:'Hangi ülkedensiniz?',en:'Which country are you from?'},
+    {s:'student',label:'👤 You',tr:"İspanya'dan geliyorum. Uzun zamandır burada mı oturuyorsunuz?",en:"I'm from Spain. Have you been living here long?"},
+    {s:'officer',label:'👋 Neighbour',tr:'Evet, beş yıldır buradayım. Herhangi bir sorunuz olursa söyleyin.',en:"Yes, I've been here five years. If you have any questions, just let me know."},
+    {s:'student',label:'👤 You',tr:'Çok teşekkür ederim, çok naziksiniz.',en:"Thank you very much, you're very kind."},
+  ]},
+];
+const dc = document.getElementById('dialogues');
+dialogues.forEach(d => {
+  let html = `<div class="card"><div class="dlg-title">${d.title}</div><div class="dlg-sub">${d.sub}</div><div style="display:flex;flex-direction:column;gap:10px;">`;
+  d.lines.forEach(l => {
+    const isS = l.s === 'student';
+    html += `<div class="${isS?'dlg-line-s':'dlg-line-o'}">
+      <div class="${isS?'bubble-s':'bubble-o'}">
+        <div class="blabel">${l.label}</div>
+        <div class="btr">${l.tr}</div>
+        <div class="ben">${l.en}</div>
+      </div>
+      <button class="${isS?'bbtn-s':'bbtn-o'}" onclick="speak('${l.tr.replace(/'/g,"\\'")}')">🔊</button>
+    </div>`;
+  });
+  html += '</div></div>';
+  dc.innerHTML += html;
+});
+
+const matchPairs = [
+  {tr:'kira',en:'rent'},{tr:'depozito',en:'deposit'},{tr:'ikamet izni',en:'residence permit'},
+  {tr:'randevu',en:'appointment'},{tr:'belge',en:'document'},{tr:'komşu',en:'neighbour'},
+];
+const quizQuestions = [
+  {type:'mc',question:'kira',options:['rent','key','deposit','heating'],answer:'rent'},
+  {type:'mc',question:'ikamet izni',options:['residence permit','passport','appointment','document'],answer:'residence permit'},
+  {type:'fill',sentence:'Hangi belgeler ___?',answer:'gerekli',hint:'What documents are required?'},
+  {type:'mc',question:'randevu',options:['appointment','application','form','document'],answer:'appointment'},
+  {type:'fill',sentence:'Kart ne zaman ___?',answer:'gelir',hint:'When will the card arrive?'},
+  {type:'mc',question:'depozito',options:['deposit','rent','key','furniture'],answer:'deposit'},
+  {type:'mc',question:'komşu',options:['neighbour','landlord','contract','address'],answer:'neighbour'},
+  {type:'mc',question:'belge',options:['document','form','passport','insurance'],answer:'document'},
+  {type:'fill',sentence:'Randevum ___',answer:'var',hint:'I have an appointment'},
+  {type:'mc',question:'sigorta',options:['insurance','address','form','card'],answer:'insurance'},
+];
+renderMatchGame('match-game', matchPairs, '🔗 Match the residence vocabulary');
+renderQuiz('quiz-box', quizQuestions, '📝 Test Your Knowledge — Residence');
+</script>
+</body>
+</html>

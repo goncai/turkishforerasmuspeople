@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Flip through 100 essential Turkish words: greetings, days, months, numbers, colours, food, verbs and more, with audio.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Top 100 Daily Words — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .cat-title { color:#E30A17; font-size:18px; font-weight:bold; margin:30px 0 0 20px; text-align:left; }
+    .cat-count { font-size:14px; color:#999; font-weight:normal; margin-left:8px; }
+    .cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(140px,1fr)); gap:15px; padding:10px 20px; }
+    .flip-card { perspective:1000px; cursor:pointer; height:100px; border-radius:10px; }
+    .flip-card:focus-visible { outline:3px solid #333; outline-offset:3px; }
+    .flip-inner { position:relative; width:100%; height:100%; transform-style:preserve-3d; transition:transform 0.5s; }
+    .flip-card.flipped .flip-inner { transform:rotateY(180deg); }
+    .flip-front, .flip-back { position:absolute; width:100%; height:100%; border-radius:10px; display:flex; flex-direction:column; align-items:center; justify-content:center; backface-visibility:hidden; -webkit-backface-visibility:hidden; padding:5px; box-sizing:border-box; }
+    .flip-front { background:#E30A17; color:white; gap:6px; }
+    .flip-back { background:white; color:#E30A17; border:2px solid #E30A17; transform:rotateY(180deg); font-weight:bold; font-size:14px; text-align:center; }
+    .flip-tr { font-size:15px; text-align:center; font-weight:bold; }
+    .flip-btn { background:rgba(255,255,255,.25); color:white; border:none; border-radius:5px; padding:2px 8px; cursor:pointer; font-size:13px; font-weight:bold; }
+    .flip-btn:hover { background:#b30812; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+    .sec-title { color:#E30A17; text-align:center; margin:10px 0 0; font-size:18px; font-weight:bold; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🇹🇷 Top 100 Daily Turkish Words</h1>
+  <p id="subtitle">Loading...</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+<div id="all-categories"></div>
+
+<div class="sec-title">🔗 Match It — Top 100 Words</div>
+<div class="match-box" id="match-game"></div>
+<div class="sec-title">📝 Test Your Knowledge — Top 100 Words</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const categories = [
+  { label:'👋 Greetings & Basics', cards:[
+    {tr:'Merhaba',en:'Hello'},{tr:'Günaydın',en:'Good morning'},{tr:'İyi günler',en:'Good afternoon'},
+    {tr:'İyi akşamlar',en:'Good evening'},{tr:'İyi geceler',en:'Good night'},{tr:'Nasılsın?',en:'How are you?'},{tr:'Lütfen',en:'Please'},
+    {tr:'Teşekkür ederim',en:'Thank you'},{tr:'Güle güle',en:'Goodbye'},{tr:'Evet',en:'Yes'},{tr:'Hayır',en:'No'},
+  ]},
+  { label:'📅 Days of the Week', cards:[
+    {tr:'Pazartesi',en:'Monday'},{tr:'Salı',en:'Tuesday'},{tr:'Çarşamba',en:'Wednesday'},
+    {tr:'Perşembe',en:'Thursday'},{tr:'Cuma',en:'Friday'},{tr:'Cumartesi',en:'Saturday'},{tr:'Pazar',en:'Sunday'},
+  ]},
+  { label:'🗓️ Months', cards:[
+    {tr:'Ocak',en:'January'},{tr:'Şubat',en:'February'},{tr:'Mart',en:'March'},{tr:'Nisan',en:'April'},
+    {tr:'Mayıs',en:'May'},{tr:'Haziran',en:'June'},{tr:'Temmuz',en:'July'},{tr:'Ağustos',en:'August'},
+    {tr:'Eylül',en:'September'},{tr:'Ekim',en:'October'},{tr:'Kasım',en:'November'},{tr:'Aralık',en:'December'},
+  ]},
+  { label:'⏰ Time', cards:[
+    {tr:'bugün',en:'today'},{tr:'yarın',en:'tomorrow'},{tr:'dün',en:'yesterday'},{tr:'sabah',en:'morning'},
+    {tr:'öğle',en:'noon'},{tr:'akşam',en:'evening'},{tr:'gece',en:'night'},{tr:'hafta',en:'week'},
+    {tr:'ay',en:'month'},{tr:'yıl',en:'year'},
+  ]},
+  { label:'🔢 Numbers', cards:[
+    {tr:'bir',en:'one'},{tr:'iki',en:'two'},{tr:'üç',en:'three'},{tr:'dört',en:'four'},{tr:'beş',en:'five'},
+    {tr:'altı',en:'six'},{tr:'yedi',en:'seven'},{tr:'sekiz',en:'eight'},{tr:'dokuz',en:'nine'},{tr:'on',en:'ten'},
+  ]},
+  { label:'🎨 Colors', cards:[
+    {tr:'kırmızı',en:'red'},{tr:'mavi',en:'blue'},{tr:'yeşil',en:'green'},{tr:'sarı',en:'yellow'},
+    {tr:'beyaz',en:'white'},{tr:'siyah',en:'black'},{tr:'turuncu',en:'orange'},{tr:'mor',en:'purple'},
+  ]},
+  { label:'🍽️ Food & Drink', cards:[
+    {tr:'su',en:'water'},{tr:'çay',en:'tea'},{tr:'kahve',en:'coffee'},{tr:'ekmek',en:'bread'},
+    {tr:'et',en:'meat'},{tr:'tavuk',en:'chicken'},{tr:'balık',en:'fish'},{tr:'sebze',en:'vegetable'},
+    {tr:'meyve',en:'fruit'},{tr:'tuz',en:'salt'},
+  ]},
+  { label:'🏃 Verbs', cards:[
+    {tr:'gitmek',en:'to go'},{tr:'gelmek',en:'to come'},{tr:'yapmak',en:'to do / make'},{tr:'görmek',en:'to see'},
+    {tr:'yemek',en:'to eat'},{tr:'içmek',en:'to drink'},{tr:'almak',en:'to take / buy'},{tr:'vermek',en:'to give'},
+    {tr:'söylemek',en:'to say'},{tr:'bilmek',en:'to know'},
+  ]},
+  { label:'✨ Adjectives', cards:[
+    {tr:'iyi',en:'good'},{tr:'kötü',en:'bad'},{tr:'zor',en:'difficult'},{tr:'kolay',en:'easy'},
+    {tr:'büyük',en:'big'},{tr:'küçük',en:'small'},{tr:'yakın',en:'near'},{tr:'uzak',en:'far'},
+    {tr:'yeni',en:'new'},{tr:'eski',en:'old'},
+  ]},
+  { label:'🏠 Everyday Nouns', cards:[
+    {tr:'ev',en:'house / home'},{tr:'araba',en:'car'},{tr:'okul',en:'school'},{tr:'kitap',en:'book'},
+    {tr:'para',en:'money'},{tr:'telefon',en:'phone'},{tr:'kapı',en:'door'},{tr:'masa',en:'table'},
+    {tr:'sandalye',en:'chair'},{tr:'arkadaş',en:'friend'},{tr:'yol',en:'road / way'},{tr:'şehir',en:'city'},
+  ]},
+];
+
+const total = categories.reduce((s,c)=>s+c.cards.length,0);
+document.getElementById('subtitle').textContent = `${total} core Turkish words across ${categories.length} categories`;
+
+const container = document.getElementById('all-categories');
+categories.forEach(cat => {
+  const h2 = document.createElement('h2');
+  h2.className = 'cat-title';
+  h2.innerHTML = `${cat.label} <span class="cat-count">(${cat.cards.length} words)</span>`;
+  container.appendChild(h2);
+  const grid = document.createElement('div');
+  grid.className = 'cards-grid';
+  cat.cards.forEach(card => {
+    const fc = document.createElement('div');
+    fc.className = 'flip-card';
+    fc.innerHTML = `<div class="flip-inner">
+      <div class="flip-front">
+        <span class="flip-tr">${card.tr}</span>
+        <button class="flip-btn" onclick="event.stopPropagation();speak('${card.tr.replace(/'/g,"\\'")}')">🔊</button>
+      </div>
+      <div class="flip-back">${card.en}</div>
+    </div>`;
+    fc.tabIndex = 0;
+    fc.setAttribute('role', 'button');
+    fc.setAttribute('aria-label', `${card.tr} — press to see the English meaning`);
+    const flip = () => {
+      fc.classList.toggle('flipped');
+      fc.setAttribute('aria-label', fc.classList.contains('flipped') ? `${card.tr}: ${card.en}` : `${card.tr} — press to see the English meaning`);
+    };
+    fc.onclick = flip;
+    fc.onkeydown = e => { if (e.target === fc && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); flip(); } };
+    grid.appendChild(fc);
+  });
+  container.appendChild(grid);
+});
+
+const matchPairs = [
+  {tr:'merhaba',en:'hello'},{tr:'teşekkür ederim',en:'thank you'},
+  {tr:'evet',en:'yes'},{tr:'hayır',en:'no'},{tr:'kırmızı',en:'red'},{tr:'su',en:'water'},
+];
+const quizQuestions = [
+  {type:'mc',question:'Pazartesi',options:['Monday','Tuesday','Wednesday','Thursday'],answer:'Monday'},
+  {type:'mc',question:'Cuma',options:['Friday','Saturday','Sunday','Monday'],answer:'Friday'},
+  {type:'mc',question:'Mayıs',options:['May','March','July','October'],answer:'May'},
+  {type:'mc',question:'Ocak',options:['January','June','August','December'],answer:'January'},
+  {type:'fill',sentence:'İyi ___ (Good afternoon)',answer:'günler',hint:'Good afternoon greeting'},
+  {type:'mc',question:'beş',options:['five','four','six','three'],answer:'five'},
+  {type:'mc',question:'kırmızı',options:['red','blue','green','yellow'],answer:'red'},
+  {type:'mc',question:'ekmek',options:['bread','water','meat','salt'],answer:'bread'},
+  {type:'fill',sentence:'Bu sınav çok ___.',answer:'zor',hint:'This exam is very difficult.'},
+  {type:'mc',question:'arkadaş',options:['friend','child','woman','man'],answer:'friend'},
+];
+renderMatchGame('match-game', matchPairs, '🔗 Match the basic words');
+renderQuiz('quiz-box', quizQuestions, '📝 Test Your Knowledge — Top 100 Words');
+</script>
+</body>
+</html>

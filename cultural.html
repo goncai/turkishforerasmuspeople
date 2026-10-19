@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Everyday Turkish expressions and customs like afiyet olsun, kolay gelsin and geçmiş olsun, explained for Erasmus students.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Cultural Communication — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin:4px 0 0; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .section-title { color:#E30A17; text-align:center; margin:20px 0 0; font-size:20px; font-weight:bold; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:15px; padding:15px 20px 20px; }
+    .phrase-card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; box-shadow:0 3px 8px rgba(0,0,0,.1); text-align:center; }
+    .phrase-tr { font-size:20px; font-weight:bold; color:#E30A17; }
+    .phrase-en { margin-top:10px; color:#333; }
+    .speak-btn { margin-top:10px; padding:8px 12px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; }
+    .speak-btn:hover { background:#b30812; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🤝 Cultural Communication</h1>
+  <p><strong>Communicate with local people like a local!</strong></p>
+  <p>Learn common Turkish expressions used in everyday life</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+
+<h2 class="section-title">🌟 Everyday Cultural Expressions</h2>
+<div class="grid">
+  <div class="phrase-card"><div class="phrase-tr">Afiyet olsun</div><div class="phrase-en">Enjoy your meal</div><button class="speak-btn" onclick="speak('Afiyet olsun')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Kolay gelsin</div><div class="phrase-en">Hope it goes easy — said to someone working</div><button class="speak-btn" onclick="speak('Kolay gelsin')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Geçmiş olsun</div><div class="phrase-en">Get well soon / sorry for your trouble</div><button class="speak-btn" onclick="speak('Geçmiş olsun')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Hoş geldin</div><div class="phrase-en">Welcome</div><button class="speak-btn" onclick="speak('Hoş geldin')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Hoş bulduk</div><div class="phrase-en">Response to welcome</div><button class="speak-btn" onclick="speak('Hoş bulduk')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Eline sağlık</div><div class="phrase-en">Well done / Good job (lit. health to your hands)</div><button class="speak-btn" onclick="speak('Eline sağlık')">🔊 Listen</button></div>
+</div>
+
+<h2 class="section-title">💬 Common Phrases</h2>
+<div class="grid">
+  <div class="phrase-card"><div class="phrase-tr">Merhaba</div><div class="phrase-en">Hello</div><button class="speak-btn" onclick="speak('Merhaba')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Nasılsınız?</div><div class="phrase-en">How are you? (formal)</div><button class="speak-btn" onclick="speak('Nasılsınız?')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">İyiyim, teşekkür ederim</div><div class="phrase-en">I'm fine, thank you</div><button class="speak-btn" onclick="speak('İyiyim, teşekkür ederim')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Lütfen</div><div class="phrase-en">Please</div><button class="speak-btn" onclick="speak('Lütfen')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Teşekkür ederim</div><div class="phrase-en">Thank you</div><button class="speak-btn" onclick="speak('Teşekkür ederim')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Rica ederim</div><div class="phrase-en">You're welcome</div><button class="speak-btn" onclick="speak('Rica ederim')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Özür dilerim</div><div class="phrase-en">I'm sorry / Excuse me</div><button class="speak-btn" onclick="speak('Özür dilerim')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Güle güle</div><div class="phrase-en">Goodbye (said by the one staying)</div><button class="speak-btn" onclick="speak('Güle güle')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Hoşça kal</div><div class="phrase-en">Goodbye (said by the one leaving)</div><button class="speak-btn" onclick="speak('Hoşça kal')">🔊 Listen</button></div>
+  <div class="phrase-card"><div class="phrase-tr">Buyurun</div><div class="phrase-en">Here you go / Please go ahead</div><button class="speak-btn" onclick="speak('Buyurun')">🔊 Listen</button></div>
+</div>
+
+<div style="text-align:center;margin:10px 0 0;font-size:20px;font-weight:bold;color:#E30A17;">🔗 Match It — Cultural Expressions</div>
+<div class="match-box" id="match-game"></div>
+<div style="text-align:center;margin:10px 0 0;font-size:20px;font-weight:bold;color:#E30A17;">📝 Test Your Knowledge — Cultural Expressions</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const matchPairs = [
+  {tr:'Güle güle', en:'Goodbye (said by stayer)'},
+  {tr:'Geçmiş olsun', en:'Get well soon'},
+  {tr:'Afiyet olsun', en:'Enjoy your meal'},
+  {tr:'Hoş geldin', en:'Welcome'},
+  {tr:'Kolay gelsin', en:'Hope it goes easy'},
+  {tr:'Buyurun', en:'Here you go / Please'},
+];
+const quizQuestions = [
+  {type:'mc',question:'Güle güle',options:['Goodbye (said by stayer)','Hello','Thank you','Welcome'],answer:'Goodbye (said by stayer)'},
+  {type:'mc',question:'Geçmiş olsun',options:['Get well soon','Good luck','Congratulations','Bon appétit'],answer:'Get well soon'},
+  {type:'fill',sentence:'Eline ___! (well done on your cooking/effort)',answer:'sağlık',hint:'a Turkish phrase of appreciation'},
+  {type:'mc',question:'Kolay gelsin',options:['Hope it goes easy','Good morning','Welcome','Have a good trip'],answer:'Hope it goes easy'},
+  {type:'mc',question:'Buyurun',options:['Here you go / Please','Thank you','Excuse me','Good luck'],answer:'Here you go / Please'},
+  {type:'mc',question:'Afiyet olsun',options:['Enjoy your meal','Good night','Get well soon','Welcome'],answer:'Enjoy your meal'},
+  {type:'mc',question:'Hoş geldin',options:['Welcome','Goodbye','Excuse me',"You're welcome"],answer:'Welcome'},
+  {type:'fill',sentence:'Hoş ___! (response to welcome)',answer:'bulduk',hint:'What you say when someone says Hoş geldin'},
+  {type:'mc',question:'Rica ederim',options:["You're welcome",'Please','Excuse me','Thank you'],answer:"You're welcome"},
+  {type:'mc',question:'Özür dilerim',options:["I'm sorry / Excuse me","You're welcome",'Good evening','Please'],answer:"I'm sorry / Excuse me"},
+];
+renderMatchGame('match-game', matchPairs, '🔗 Match the cultural expressions');
+renderQuiz('quiz-box', quizQuestions, '📝 Test Your Knowledge — Cultural Expressions');
+</script>
+</body>
+</html>

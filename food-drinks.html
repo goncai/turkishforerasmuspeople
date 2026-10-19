@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Order food in Turkish: menu vocabulary, allergy phrases, street food, tipping and a restaurant dialogue.">
+  <meta name="theme-color" content="#E30A17">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>Food & Drinks — Turkish Learning</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family:Arial,sans-serif; background:#fff; }
+    header { background:#E30A17; color:white; padding:20px; text-align:center; }
+    header p { margin-top:5px; font-size:14px; opacity:.9; }
+    .back { color:#E30A17; font-weight:bold; text-decoration:none; display:inline-block; padding:10px 20px; }
+    .hero { display:flex; justify-content:center; padding:10px 0; }
+    .hero img { width:50%; max-height:150px; object-fit:cover; border-radius:10px; }
+    .sec { color:#E30A17; margin:24px 0 10px; font-size:18px; text-align:center; font-weight:bold; }
+    .vocab-grid { padding:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; }
+    .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; text-align:left; }
+    .card-title { color:#E30A17; margin-bottom:10px; text-align:center; font-weight:bold; }
+    .word-row { display:flex; align-items:center; justify-content:space-between; margin:8px 0; }
+    .word-en { color:#444; font-size:14px; margin-bottom:5px; }
+    .speak-btn { padding:6px 10px; background:#E30A17; color:white; border:none; border-radius:6px; cursor:pointer; flex-shrink:0; }
+    .speak-btn:hover { background:#b30812; }
+    .phrase-row { display:flex; align-items:center; justify-content:space-between; gap:10px; background:#fff8f8; border-radius:8px; padding:10px 12px; border:1px solid #fdd; margin-bottom:8px; }
+    .allergy-row { display:flex; align-items:center; justify-content:space-between; gap:10px; background:white; border-radius:8px; padding:10px 12px; border:1px solid #fdd; margin-bottom:8px; }
+    .street-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:12px; }
+    .street-card { background:#fff5f5; border:2px solid #E30A17; border-radius:12px; padding:14px; text-align:left; }
+    .street-name { font-weight:bold; color:#E30A17; font-size:15px; margin-bottom:6px; }
+    .street-desc { font-size:13px; color:#444; font-weight:normal; line-height:1.5; margin-bottom:8px; }
+    .note-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:14px; }
+    .note-card { background:#fff5f5; border:2px solid #E30A17; border-radius:12px; padding:16px; text-align:left; }
+    .note-icon { font-size:22px; margin-bottom:6px; }
+    .note-title { font-weight:bold; color:#E30A17; margin-bottom:6px; }
+    .note-text { font-size:13px; color:#444; font-weight:normal; line-height:1.5; }
+    .dialogue { display:flex; flex-direction:column; gap:10px; }
+    .dlg-s { display:flex; flex-direction:row-reverse; gap:10px; align-items:flex-end; }
+    .dlg-o { display:flex; flex-direction:row; gap:10px; align-items:flex-end; }
+    .bub-s { max-width:72%; background:#E30A17; color:white; border-radius:12px; padding:10px 14px; text-align:left; }
+    .bub-o { max-width:72%; background:#f0f0f0; color:#222; border-radius:12px; padding:10px 14px; text-align:left; }
+    .btr { font-size:14px; font-weight:bold; margin-bottom:3px; }
+    .ben { font-size:12px; opacity:.85; }
+    .bbtn-s { margin-top:6px; padding:3px 8px; background:rgba(255,255,255,.2); color:white; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .bbtn-o { margin-top:6px; padding:3px 8px; background:rgba(0,0,0,.08); color:#333; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
+    .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
+    .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>🍽️ Food & Drinks</h1>
+  <p>Order food and drinks like a local</p>
+</header>
+<a class="back" href="index.html">⬅ Back</a>
+<div style="display:flex;justify-content:center;padding:10px 0;"><img src="https://images.unsplash.com/photo-1617806501553-d3a6a3a7b227?q=80&w=400&auto=format&fit=crop" alt="Turkish food" style="width:200px;height:200px;object-fit:cover;border-radius:10px;"></div>
+
+<div class="vocab-grid">
+  <div class="card">
+    <div class="card-title">🍴 Food & Drink Vocabulary</div>
+    <div class="word-row"><div><div>menü</div><div class="word-en">menu</div></div><button class="speak-btn" onclick="speak('menü')">🔊</button></div>
+    <div class="word-row"><div><div>sipariş</div><div class="word-en">order</div></div><button class="speak-btn" onclick="speak('sipariş')">🔊</button></div>
+    <div class="word-row"><div><div>garson</div><div class="word-en">waiter</div></div><button class="speak-btn" onclick="speak('garson')">🔊</button></div>
+    <div class="word-row"><div><div>hesap</div><div class="word-en">bill</div></div><button class="speak-btn" onclick="speak('hesap')">🔊</button></div>
+    <div class="word-row"><div><div>su</div><div class="word-en">water</div></div><button class="speak-btn" onclick="speak('su')">🔊</button></div>
+    <div class="word-row"><div><div>çay</div><div class="word-en">tea</div></div><button class="speak-btn" onclick="speak('çay')">🔊</button></div>
+    <div class="word-row"><div><div>kahve</div><div class="word-en">coffee</div></div><button class="speak-btn" onclick="speak('kahve')">🔊</button></div>
+    <div class="word-row"><div><div>içecek</div><div class="word-en">drink</div></div><button class="speak-btn" onclick="speak('içecek')">🔊</button></div>
+    <div class="word-row"><div><div>yemek</div><div class="word-en">food / meal</div></div><button class="speak-btn" onclick="speak('yemek')">🔊</button></div>
+    <div class="word-row"><div><div>porsiyon</div><div class="word-en">portion</div></div><button class="speak-btn" onclick="speak('porsiyon')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🇹🇷 Popular Turkish Foods</div>
+    <div class="word-row"><div><div>mercimek çorbası</div><div class="word-en">lentil soup</div></div><button class="speak-btn" onclick="speak('mercimek çorbası')">🔊</button></div>
+    <div class="word-row"><div><div>kebap</div><div class="word-en">kebab</div></div><button class="speak-btn" onclick="speak('kebap')">🔊</button></div>
+    <div class="word-row"><div><div>döner</div><div class="word-en">doner</div></div><button class="speak-btn" onclick="speak('döner')">🔊</button></div>
+    <div class="word-row"><div><div>mantı</div><div class="word-en">Turkish dumplings</div></div><button class="speak-btn" onclick="speak('mantı')">🔊</button></div>
+    <div class="word-row"><div><div>baklava</div><div class="word-en">baklava dessert</div></div><button class="speak-btn" onclick="speak('baklava')">🔊</button></div>
+    <div class="word-row"><div><div>simit</div><div class="word-en">Turkish bagel</div></div><button class="speak-btn" onclick="speak('simit')">🔊</button></div>
+  </div>
+  <div class="card">
+    <div class="card-title">🗣️ Useful Sentences</div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Kahve alabilir miyim?</div><div style="color:#555;font-size:13px;">Can I get a coffee?</div></div><button class="speak-btn" onclick="speak('Kahve alabilir miyim?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Çay alabilir miyim?</div><div style="color:#555;font-size:13px;">Can I get tea?</div></div><button class="speak-btn" onclick="speak('Çay alabilir miyim?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Bir adet mercimek çorbası alabilir miyim?</div><div style="color:#555;font-size:13px;">Can I have one lentil soup?</div></div><button class="speak-btn" onclick="speak('Bir adet mercimek çorbası alabilir miyim?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Menüyü alabilir miyim?</div><div style="color:#555;font-size:13px;">Can I get the menu?</div></div><button class="speak-btn" onclick="speak('Menüyü alabilir miyim?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Hesabı alabilir miyim?</div><div style="color:#555;font-size:13px;">Can I get the bill? (short: "Hesap, lütfen.")</div></div><button class="speak-btn" onclick="speak('Hesabı alabilir miyim?')">🔊</button></div>
+  </div>
+</div>
+
+<div style="padding:0 20px;">
+  <h2 class="sec">📋 Ordering Like a Local</h2>
+  <div class="card">
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">soğansız</div><div style="color:#555;font-size:13px;">without onion</div></div><button class="speak-btn" onclick="speak('soğansız')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">acısız</div><div style="color:#555;font-size:13px;">not spicy</div></div><button class="speak-btn" onclick="speak('acısız')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">ekstra sos</div><div style="color:#555;font-size:13px;">extra sauce</div></div><button class="speak-btn" onclick="speak('ekstra sos')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Bu acılı mı?</div><div style="color:#555;font-size:13px;">Is this spicy?</div></div><button class="speak-btn" onclick="speak('Bu acılı mı?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Ne tavsiye edersiniz?</div><div style="color:#555;font-size:13px;">What do you recommend?</div></div><button class="speak-btn" onclick="speak('Ne tavsiye edersiniz?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Paket yapar mısınız?</div><div style="color:#555;font-size:13px;">Can I get it to go / takeaway?</div></div><button class="speak-btn" onclick="speak('Paket yapar mısınız?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Ayrı hesap alabilir miyiz?</div><div style="color:#555;font-size:13px;">Can we have separate bills?</div></div><button class="speak-btn" onclick="speak('Ayrı hesap alabilir miyiz?')">🔊</button></div>
+    <div class="phrase-row"><div><div style="font-weight:bold;font-size:14px;">Boş masanız var mı?</div><div style="color:#555;font-size:13px;">Do you have a free table?</div></div><button class="speak-btn" onclick="speak('Boş masanız var mı?')">🔊</button></div>
+  </div>
+
+  <h2 class="sec">🥗 Dietary & Allergy Phrases</h2>
+  <div style="background:#fff5f5;border:2px solid #E30A17;border-radius:12px;padding:20px;text-align:left;">
+    <p style="margin:0 0 14px;font-size:13px;color:#555;font-weight:normal;line-height:1.5;">Turkish cuisine uses meat, nuts and dairy widely. Learn these before eating out to stay safe and comfortable.</p>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">Vejeteryanım.</div><div style="color:#555;font-size:13px;">I am vegetarian.</div></div><button class="speak-btn" onclick="speak('Vejeteryanım.')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">Veganım.</div><div style="color:#555;font-size:13px;">I am vegan.</div></div><button class="speak-btn" onclick="speak('Veganım.')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">Yer fıstığı alerjim var.</div><div style="color:#555;font-size:13px;">I have a peanut allergy. (fıstık alone often means pistachio)</div></div><button class="speak-btn" onclick="speak('Yer fıstığı alerjim var.')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">Gluten yiyemiyorum.</div><div style="color:#555;font-size:13px;">I cannot eat gluten.</div></div><button class="speak-btn" onclick="speak('Gluten yiyemiyorum.')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">İçinde et var mı?</div><div style="color:#555;font-size:13px;">Does it contain meat?</div></div><button class="speak-btn" onclick="speak('İçinde et var mı?')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">İçinde süt ürünü var mı?</div><div style="color:#555;font-size:13px;">Does it contain dairy?</div></div><button class="speak-btn" onclick="speak('İçinde süt ürünü var mı?')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">Domuz eti yemiyorum.</div><div style="color:#555;font-size:13px;">I don't eat pork.</div></div><button class="speak-btn" onclick="speak('Domuz eti yemiyorum.')">🔊</button></div>
+    <div class="allergy-row"><div><div style="font-weight:bold;font-size:14px;">Buna alerjim var.</div><div style="color:#555;font-size:13px;">I am allergic to this.</div></div><button class="speak-btn" onclick="speak('Buna alerjim var.')">🔊</button></div>
+  </div>
+
+  <h2 class="sec">🥙 Street Food Guide</h2>
+  <div class="street-grid">
+    <div class="street-card"><div class="street-name">Simit</div><div class="street-desc">Sesame-crusted bread ring — sold everywhere</div><button class="speak-btn" onclick="speak('Simit')">🔊</button></div>
+    <div class="street-card"><div class="street-name">Döner Dürüm</div><div class="street-desc">Döner meat wrapped in thin flatbread (lavaş)</div><button class="speak-btn" onclick="speak('Döner Dürüm')">🔊</button></div>
+    <div class="street-card"><div class="street-name">Gözleme</div><div class="street-desc">Thin pastry filled with cheese, spinach or potato</div><button class="speak-btn" onclick="speak('Gözleme')">🔊</button></div>
+    <div class="street-card"><div class="street-name">Lahmacun</div><div class="street-desc">Thin crispy dough with minced meat — rolled up with salad</div><button class="speak-btn" onclick="speak('Lahmacun')">🔊</button></div>
+    <div class="street-card"><div class="street-name">Kumpir</div><div class="street-desc">Giant stuffed baked potato — pick your own toppings</div><button class="speak-btn" onclick="speak('Kumpir')">🔊</button></div>
+    <div class="street-card"><div class="street-name">Midye Dolma</div><div class="street-desc">Stuffed mussels with spiced rice — sold by street vendors</div><button class="speak-btn" onclick="speak('Midye Dolma')">🔊</button></div>
+    <div class="street-card"><div class="street-name">Islak Hamburger</div><div class="street-desc">Steam-soaked burger in Istanbul, iconic late-night snack</div><button class="speak-btn" onclick="speak('Islak Hamburger')">🔊</button></div>
+  </div>
+
+  <h2 class="sec">🌟 Cultural Notes — Eating Out in Turkey</h2>
+  <div class="note-grid">
+    <div class="note-card"><div class="note-icon">🍵</div><div class="note-title">Çay after the meal</div><div class="note-text">Many restaurants offer a glass of çay after the meal for free, and your glass may be refilled without asking. In tea houses (çay ocağı, çay bahçesi) you pay per glass. Declining is fine — just say 'Yok, teşekkür ederim' or put your spoon across the glass.</div></div>
+    <div class="note-card"><div class="note-icon">💰</div><div class="note-title">Tipping (bahşiş)</div><div class="note-text">Tipping is appreciated but not mandatory. Around 5–10% is common in restaurants. Rounding up the bill (e.g. paying ₺100 for a ₺87 meal) is very common and perfectly acceptable.</div></div>
+    <div class="note-card"><div class="note-icon">🤝</div><div class="note-title">Ismarlama — treating someone</div><div class="note-text">If someone says 'Ben ısmarlıyorum' (I'll treat you), do not fight over it — accept gracefully. Treating friends is a strong cultural gesture and refusing can feel offensive.</div></div>
+    <div class="note-card"><div class="note-icon">🧾</div><div class="note-title">Splitting the bill (ayrı hesap)</div><div class="note-text">Asking for a separate bill is unusual in Turkey — it can seem cold or stingy among friends. Usually one person pays and others treat next time. Among students it's more flexible.</div></div>
+  </div>
+
+  <h2 class="sec">🎭 Real-Life Dialogue — At the Restaurant</h2>
+  <div class="card">
+    <p style="margin:0 0 14px;font-size:13px;color:#555;font-weight:normal;text-align:center;font-style:italic;">Ordering a full meal — from arrival to paying the bill</p>
+    <div class="dialogue">
+      <div class="dlg-o"><div style="font-size:22px;">🧑‍🍳</div><div class="bub-o"><div class="btr">Hoş geldiniz! Ne alırsınız?</div><div class="ben">Welcome! What would you like?</div><button class="bbtn-o" onclick="speak('Hoş geldiniz! Ne alırsınız?')">🔊</button></div></div>
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Menüyü alabilir miyim?</div><div class="ben">Can I get the menu?</div><button class="bbtn-s" onclick="speak('Menüyü alabilir miyim?')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">🧑‍🍳</div><div class="bub-o"><div class="btr">Buyurun, tabii. İçecek ister misiniz?</div><div class="ben">Of course, here you go. Would you like a drink?</div><button class="bbtn-o" onclick="speak('Buyurun, tabii. İçecek ister misiniz?')">🔊</button></div></div>
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Bir su ve bir çay alabilir miyim? Ayrıca bu acılı mı?</div><div class="ben">Can I get a water and a tea? Also, is this spicy?</div><button class="bbtn-s" onclick="speak('Bir su ve bir çay alabilir miyim? Ayrıca bu acılı mı?')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">🧑‍🍳</div><div class="bub-o"><div class="btr">Çok az acılı. Acısız yapalım mı?</div><div class="ben">It's a little spicy. Shall we make it non-spicy?</div><button class="bbtn-o" onclick="speak('Çok az acılı. Acısız yapalım mı?')">🔊</button></div></div>
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Evet, lütfen. Ve bir mercimek çorbası da istiyorum.</div><div class="ben">Yes please. And I'd also like a lentil soup.</div><button class="bbtn-s" onclick="speak('Evet, lütfen. Ve bir mercimek çorbası da istiyorum.')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">🧑‍🍳</div><div class="bub-o"><div class="btr">Tabii, hemen getiriyorum.</div><div class="ben">Of course, I'll bring it right away.</div><button class="bbtn-o" onclick="speak('Tabii, hemen getiriyorum.')">🔊</button></div></div>
+      <div class="dlg-s"><div style="font-size:22px;">🎓</div><div class="bub-s"><div class="btr">Teşekkürler. Hesabı alabilir miyim?</div><div class="ben">Thank you. Can I get the bill?</div><button class="bbtn-s" onclick="speak('Teşekkürler. Hesabı alabilir miyim?')">🔊</button></div></div>
+      <div class="dlg-o"><div style="font-size:22px;">🧑‍🍳</div><div class="bub-o"><div class="btr">Hemen getiriyorum. Afiyet olsun!</div><div class="ben">Right away. Enjoy your meal!</div><button class="bbtn-o" onclick="speak('Hemen getiriyorum. Afiyet olsun!')">🔊</button></div></div>
+    </div>
+  </div>
+</div>
+
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">🔗 Match It — Food & Drinks</div>
+<div class="match-box" id="match-game"></div>
+<div style="text-align:center;font-size:18px;font-weight:bold;color:#E30A17;margin:10px 0 0;">📝 Test Your Knowledge — Food & Drinks</div>
+<div class="quiz-box" id="quiz-box"></div>
+
+<script src="_shared.js"></script>
+<script>
+const matchPairs=[{tr:'hesap',en:'bill'},{tr:'garson',en:'waiter'},{tr:'çay',en:'tea'},{tr:'sipariş',en:'order'},{tr:'simit',en:'Turkish bagel'},{tr:'mantı',en:'Turkish dumplings'}];
+const quizQuestions=[
+  {type:'mc',question:'hesap',options:['bill','menu','order','waiter'],answer:'bill'},
+  {type:'mc',question:'mantı',options:['Turkish dumplings','lentil soup','baklava','kebab'],answer:'Turkish dumplings'},
+  {type:'fill',sentence:'Kahve alabilir ___?',answer:'miyim',hint:'Can I get a coffee?'},
+  {type:'mc',question:'çay',options:['tea','coffee','water','menu'],answer:'tea'},
+  {type:'fill',sentence:'Hesabı alabilir ___?',answer:'miyim',hint:'Can I get the bill?'},
+  {type:'mc',question:'garson',options:['waiter','menu','bill','order'],answer:'waiter'},
+  {type:'mc',question:'sipariş',options:['order','bill','waiter','menu'],answer:'order'},
+  {type:'mc',question:'simit',options:['Turkish bagel','lentil soup','dumplings','dessert'],answer:'Turkish bagel'},
+  {type:'fill',sentence:'Menüyü alabilir ___?',answer:'miyim',hint:'Can I get the menu?'},
+  {type:'mc',question:'mercimek çorbası',options:['lentil soup','kebab','baklava','doner'],answer:'lentil soup'},
+];
+renderMatchGame('match-game',matchPairs,'🔗 Match the food & drinks vocabulary');
+renderQuiz('quiz-box',quizQuestions,'📝 Test Your Knowledge — Food & Drinks');
+</script>
+</body>
+</html>
