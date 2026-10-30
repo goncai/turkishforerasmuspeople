@@ -22,6 +22,73 @@
       margin: 18px 0 10px;
       line-height:1.1;
     }
+    .food-grid {
+      max-width: 1200px;
+      margin: 0 auto 24px;
+      padding: 10px 18px 0;
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+    .food-card {
+      height: 260px;
+      border: 3px solid #1d2d3a;
+      border-radius: 22px;
+      padding: 14px 14px 10px;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:flex-start;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.08);
+      position:relative;
+      overflow:hidden;
+    }
+    .food-card:nth-child(1) { background:#f7dbe5; }
+    .food-card:nth-child(2) { background:#cfe7f7; }
+    .food-card:nth-child(3) { background:#f5e3bb; }
+    .food-card:nth-child(4) { background:#f6d7d7; }
+    .food-card:nth-child(5) { background:#dfe9b4; }
+    .food-card:nth-child(6) { background:#f3e0a8; }
+    .food-card:nth-child(7) { background:#d7d0ea; }
+    .food-card:nth-child(8) { background:#dfe7d9; }
+    .food-card:nth-child(9) { background:#d6dfe8; }
+    .food-card:nth-child(10) { background:#dfeccc; }
+    .food-card:nth-child(11) { background:#d8d8e9; }
+    .food-card:nth-child(12) { background:#d7e8e8; }
+    .food-card:nth-child(13) { background:#cfeae8; }
+    .food-card:nth-child(14) { background:#f3e6be; }
+    .food-card:nth-child(15) { background:#d7ebf5; }
+    .food-card:nth-child(16) { background:#dfe7d6; }
+    .food-illustration {
+      width: 100%;
+      height: 138px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size: 72px;
+      line-height:1;
+      margin-bottom: 8px;
+      filter: drop-shadow(0 2px 0 rgba(0,0,0,0.08));
+    }
+    .food-name {
+      margin-top:auto;
+      font-size: clamp(1.1rem, 1.6vw, 2.1rem);
+      line-height:1.15;
+      font-weight:800;
+      color:#1a1a1a;
+      text-align:center;
+      width:100%;
+      letter-spacing:0.02em;
+    }
+    .food-sub {
+      margin-top: 4px;
+      font-size: 0.92rem;
+      color:#2a2a2a;
+      text-align:center;
+      line-height:1.2;
+      font-weight:600;
+      opacity:0.9;
+    }
     .sec { color:#E30A17; margin:24px 0 10px; font-size:18px; text-align:center; font-weight:bold; }
     .vocab-grid { padding:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; }
     .card { background:white; border:2px solid #E30A17; padding:20px; border-radius:12px; text-align:left; }
@@ -62,6 +129,89 @@
 <a class="back" href="index.html">⬅ Back</a>
 
 <h2 class="food-title">TÜRK MUTFAĞI (TURKISH CUISINE)</h2>
+
+<div class="food-grid">
+  <div class="food-card">
+    <div class="food-illustration">🍢</div>
+    <div class="food-name">KEBAP</div>
+    <div class="food-sub">Kebab</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍰</div>
+    <div class="food-name">BAKLAVA</div>
+    <div class="food-sub">Baklava</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🥯</div>
+    <div class="food-name">SİMİT</div>
+    <div class="food-sub">Simit / Turkish Bagel</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍳</div>
+    <div class="food-name">SUCUKLU<br>YUMURTA</div>
+    <div class="food-sub">Sucuk with Eggs</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🌮</div>
+    <div class="food-name">LAHMACUN</div>
+    <div class="food-sub">Lahmacun</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🥙</div>
+    <div class="food-name">PİDE</div>
+    <div class="food-sub">Pide</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍽️</div>
+    <div class="food-name">İSKENDER<br>KEBAP</div>
+    <div class="food-sub">Iskender Kebab</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">☕</div>
+    <div class="food-name">KAHVE</div>
+    <div class="food-sub">Turkish Coffee</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🫖</div>
+    <div class="food-name">ÇAY</div>
+    <div class="food-sub">Turkish Tea</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍬</div>
+    <div class="food-name">LOKUM</div>
+    <div class="food-sub">Turkish Delight</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍲</div>
+    <div class="food-name">SARMA</div>
+    <div class="food-sub">Stuffed Vine Leaves</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🥣</div>
+    <div class="food-name">ÇORBA</div>
+    <div class="food-sub">Lentil Soup</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍚</div>
+    <div class="food-name">PİLAV</div>
+    <div class="food-sub">Pilaf / Rice</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🥟</div>
+    <div class="food-name">MANTI</div>
+    <div class="food-sub">Turkish Ravioli</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🫓</div>
+    <div class="food-name">GÖZLEME</div>
+    <div class="food-sub">Gözleme</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🥛</div>
+    <div class="food-name">AYRAN</div>
+    <div class="food-sub">Ayran</div>
+  </div>
+</div>
 
 <div class="vocab-grid">
   <div class="card">
