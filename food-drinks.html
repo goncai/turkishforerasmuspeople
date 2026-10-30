@@ -23,71 +23,56 @@
       line-height:1.1;
     }
     .food-grid {
-      max-width: 1200px;
-      margin: 0 auto 24px;
+      max-width: 1100px;
+      margin: 0 auto 18px;
       padding: 10px 18px 0;
       display:grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
+      grid-template-columns: repeat(3, minmax(180px, 1fr));
+      gap: 16px 18px;
     }
     .food-card {
-      height: 260px;
-      border: 3px solid #1d2d3a;
-      border-radius: 22px;
-      padding: 14px 14px 10px;
+      border: 3px solid #222;
+      border-radius: 18px;
+      min-height: 230px;
       display:flex;
       flex-direction:column;
       align-items:center;
       justify-content:flex-start;
+      padding: 14px 10px 12px;
       box-shadow: 0 3px 0 rgba(0,0,0,0.08);
-      position:relative;
+      background:#f3f3f3;
       overflow:hidden;
     }
-    .food-card:nth-child(1) { background:#f7dbe5; }
-    .food-card:nth-child(2) { background:#cfe7f7; }
-    .food-card:nth-child(3) { background:#f5e3bb; }
-    .food-card:nth-child(4) { background:#f6d7d7; }
-    .food-card:nth-child(5) { background:#dfe9b4; }
-    .food-card:nth-child(6) { background:#f3e0a8; }
-    .food-card:nth-child(7) { background:#d7d0ea; }
-    .food-card:nth-child(8) { background:#dfe7d9; }
-    .food-card:nth-child(9) { background:#d6dfe8; }
-    .food-card:nth-child(10) { background:#dfeccc; }
-    .food-card:nth-child(11) { background:#d8d8e9; }
-    .food-card:nth-child(12) { background:#d7e8e8; }
-    .food-card:nth-child(13) { background:#cfeae8; }
-    .food-card:nth-child(14) { background:#f3e6be; }
-    .food-card:nth-child(15) { background:#d7ebf5; }
-    .food-card:nth-child(16) { background:#dfe7d6; }
+    .food-card:nth-child(1) { background:#f4dfe2; }
+    .food-card:nth-child(2) { background:#f3ebd2; }
+    .food-card:nth-child(3) { background:#d9eef8; }
+    .food-card:nth-child(4) { background:#dfe7d5; }
+    .food-card:nth-child(5) { background:#f6e7b7; }
+    .food-card:nth-child(6) { background:#e9d9ed; }
+    .food-card:nth-child(7) { background:#d7eff3; }
+    .food-card:nth-child(8) { background:#dfe9c8; }
+    .food-card:nth-child(9) { background:#f2e4b4; }
+    .food-card:nth-child(10) { background:#d9e9d0; }
+    .food-card:nth-child(11) { background:#dfe9e9; }
+    .food-card:nth-child(12) { background:#e9d3cf; }
     .food-illustration {
       width: 100%;
-      height: 138px;
+      height: 160px;
       display:flex;
       align-items:center;
       justify-content:center;
-      font-size: 72px;
+      font-size: clamp(4rem, 4vw, 6rem);
       line-height:1;
-      margin-bottom: 8px;
       filter: drop-shadow(0 2px 0 rgba(0,0,0,0.08));
     }
     .food-name {
-      margin-top:auto;
-      font-size: clamp(1.1rem, 1.6vw, 2.1rem);
-      line-height:1.15;
-      font-weight:800;
-      color:#1a1a1a;
-      text-align:center;
-      width:100%;
+      font-size: clamp(1.1rem, 1.6vw, 2rem);
+      font-weight: 800;
+      color:#111;
       letter-spacing:0.02em;
-    }
-    .food-sub {
-      margin-top: 4px;
-      font-size: 0.92rem;
-      color:#2a2a2a;
       text-align:center;
-      line-height:1.2;
-      font-weight:600;
-      opacity:0.9;
+      line-height:1.1;
+      margin-top: 2px;
     }
     .sec { color:#E30A17; margin:24px 0 10px; font-size:18px; text-align:center; font-weight:bold; }
     .vocab-grid { padding:20px; display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:15px; }
@@ -119,6 +104,12 @@
     .bbtn-o { margin-top:6px; padding:3px 8px; background:rgba(0,0,0,.08); color:#333; border:none; border-radius:5px; cursor:pointer; font-size:12px; }
     .quiz-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:24px; margin:20px; text-align:center; }
     .match-box { background:white; border:2px solid #E30A17; border-radius:12px; padding:20px; margin:20px; }
+    @media (max-width: 760px) {
+      .food-grid { grid-template-columns: repeat(2, minmax(150px, 1fr)); }
+    }
+    @media (max-width: 480px) {
+      .food-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -132,84 +123,52 @@
 
 <div class="food-grid">
   <div class="food-card">
-    <div class="food-illustration">🍢</div>
-    <div class="food-name">KEBAP</div>
-    <div class="food-sub">Kebab</div>
+    <div class="food-illustration">🫖</div>
+    <div class="food-name">TÜRK ÇAYI</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">☕</div>
+    <div class="food-name">TÜRK KAHVESİ</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🥛</div>
+    <div class="food-name">YOĞURT</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍬</div>
+    <div class="food-name">TÜRK LOKUMU</div>
   </div>
   <div class="food-card">
     <div class="food-illustration">🍰</div>
     <div class="food-name">BAKLAVA</div>
-    <div class="food-sub">Baklava</div>
   </div>
   <div class="food-card">
     <div class="food-illustration">🥯</div>
     <div class="food-name">SİMİT</div>
-    <div class="food-sub">Simit / Turkish Bagel</div>
   </div>
   <div class="food-card">
-    <div class="food-illustration">🍳</div>
-    <div class="food-name">SUCUKLU<br>YUMURTA</div>
-    <div class="food-sub">Sucuk with Eggs</div>
+    <div class="food-illustration">🍦</div>
+    <div class="food-name">MAAŞ DONDURMASI</div>
   </div>
   <div class="food-card">
-    <div class="food-illustration">🌮</div>
-    <div class="food-name">LAHMACUN</div>
-    <div class="food-sub">Lahmacun</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🥙</div>
-    <div class="food-name">PİDE</div>
-    <div class="food-sub">Pide</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🍽️</div>
-    <div class="food-name">İSKENDER<br>KEBAP</div>
-    <div class="food-sub">Iskender Kebab</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">☕</div>
-    <div class="food-name">KAHVE</div>
-    <div class="food-sub">Turkish Coffee</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🫖</div>
-    <div class="food-name">ÇAY</div>
-    <div class="food-sub">Turkish Tea</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🍬</div>
-    <div class="food-name">LOKUM</div>
-    <div class="food-sub">Turkish Delight</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🍲</div>
-    <div class="food-name">SARMA</div>
-    <div class="food-sub">Stuffed Vine Leaves</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🥣</div>
-    <div class="food-name">ÇORBA</div>
-    <div class="food-sub">Lentil Soup</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🍚</div>
-    <div class="food-name">PİLAV</div>
-    <div class="food-sub">Pilaf / Rice</div>
+    <div class="food-illustration">🥮</div>
+    <div class="food-name">KÜNEFE</div>
   </div>
   <div class="food-card">
     <div class="food-illustration">🥟</div>
-    <div class="food-name">MANTI</div>
-    <div class="food-sub">Turkish Ravioli</div>
+    <div class="food-name">BÖREK</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍃</div>
+    <div class="food-name">YAPRAK SARMA</div>
+  </div>
+  <div class="food-card">
+    <div class="food-illustration">🍢</div>
+    <div class="food-name">DÖNER</div>
   </div>
   <div class="food-card">
     <div class="food-illustration">🫓</div>
-    <div class="food-name">GÖZLEME</div>
-    <div class="food-sub">Gözleme</div>
-  </div>
-  <div class="food-card">
-    <div class="food-illustration">🥛</div>
-    <div class="food-name">AYRAN</div>
-    <div class="food-sub">Ayran</div>
+    <div class="food-name">LAHMACUN</div>
   </div>
 </div>
 
